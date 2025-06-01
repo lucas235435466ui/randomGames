@@ -1,0 +1,2690 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <style>
+      body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+
+      div  {
+        margin: 20px;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0 6px 4px rgba(0, 0, 0, 0.1);
+        
+      }
+
+      .meteorDivs:hover {
+        cursor: pointer;
+      }
+
+
+      .spotifyBtn {
+        background-color: #cdf3d5;
+        color: rgb(0, 0, 0);
+        border: none;
+        padding: none;
+        margin: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size:20px;
+        transform: scale(0.7);
+        width: 660%;
+        height: 35px;
+        margin-left: -30px;
+        margin-top: -10px;
+        transition: all 0.3s ease;
+
+      }
+      .spotifyBtn:hover {
+        background-color: #a2e0b5;
+        color: #000;
+        transform: scale(0.75);
+      }
+
+      .spotifyDiv, .microsoftDiv, .appleDiv {
+        margin: 0px;
+        padding: 0px;
+        box-shadow: none;
+        width: 10%;
+      }
+
+      .spotifyDiv img, .microsoftDiv img,  .appleDiv img {
+        width: 74px;
+        height: 80px;
+        margin-top: -10px;
+      }
+
+
+
+      .bakeryDiv, .factoryDiv, .droneDiv, .worldDiv {
+        margin: 0px;
+        padding: 0px;
+        box-shadow: none;
+        width: 10%;
+      }
+      .bakeryDiv img, .factoryDiv img, .droneDiv img, .worldDiv img {
+        width: 80px;
+        height: 80px;
+        margin-top: -10px;
+      }
+
+
+      input {
+        cursor: pointer;
+      }
+      input[type=color] {
+        cursor: crosshair;
+      }
+      .title {
+        color: #333;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      #allNumbers {
+        text-align: center;
+        font-size: 20px;
+        color: #555;
+      }
+
+      @keyframes explodePulse {
+  0% {
+    box-shadow:
+      0 0 20px 5px rgba(255, 60, 0, 0.8),
+      0 0 40px 10px rgba(255, 0, 0, 0.6),
+      0 0 60px 15px rgba(255, 100, 0, 0.4);
+    transform: scale(1);
+  }
+  100% {
+    box-shadow:
+      0 0 30px 10px rgba(255, 100, 0, 1),
+      0 0 60px 20px rgba(255, 0, 0, 0.8),
+      0 0 80px 25px rgba(255, 150, 0, 0.6);
+    transform: scale(1.02);
+  }
+
+  end {
+    box-shadow: none;
+    transform: scale(1);
+  }
+}
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+
+      }
+
+      .emojis:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+        filter: brightness(110%), blur(0px);
+      }
+      .emojis {
+        transition: ease all 0.3s;
+        
+      }
+
+      @keyframes grad {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .btnTop {
+        position: absolute;
+        transform: scale(0.8);
+        margin-top: 6px;  
+      }
+
+      .subjects {
+        margin-top: 10px;
+        border-radius: 5px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        transition: ease 0.3s all;
+      }	
+      .subjects:hover {
+        background-color: #e0e0e0;
+        transform: scale(1.06);
+      }
+
+     #addMoreBtn:hover {
+      background-color:  #171717 !important;
+      color: rgb(161, 184, 157) !important;
+     }
+
+     #findGpaBtn:hover {
+      background-color:  #5c1883 !important;
+      color: white !important;
+     }
+
+     #deleteBtnSubject:hover {
+      background-color:  #171717 !important;
+      color: white !important;
+     }
+
+     .namesSpin {
+      transition: all ease-in-out 0.3s;
+      margin-top: 10px;
+      border-radius: 5px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      background-color: #f0f0f0;
+      font-size: 16px;
+      color: #333;
+      cursor: pointer;
+      
+     }
+      .namesSpin:hover {
+        background-color: #e0e0e0;
+        transform: scale(1.06);
+      }
+
+      #cookie:hover {
+        transform: scale(1.05);
+        filter: brightness(90%);
+      }
+
+      .buyButtonsCookie {
+        width: 50%;
+        height: 32px;
+        background-color: #adadad;
+       
+      }
+      .bBuyBtn:hover {
+        filter: brightness(90%);
+        transform: scale(0.85);
+        
+      }
+
+      .bBuyBtn {
+        transition: all ease 0.3s;
+        transform: scale(0.8);
+         width: 160%; 
+         margin-left: -22px;
+          margin-top: -15px;
+          border-radius: 8px;
+          border: none;
+      }
+
+      .pBuyBtn {
+        margin-top: -15px;
+         min-width: 600px; 
+         font-size: 21px;
+          margin-left: -10px;
+      }
+
+      #rebirthBtn:hover {
+        background-color: #ff0062 !important;
+        width: 18% !important;
+        margin-left: 450px !important;
+        transform: scale(1.07);
+      }
+      
+      .goldenDiv {
+        position: absolute; 
+        margin-top: -650px;
+         box-shadow: none; 
+         transform: scale(0.6); 
+         margin-left: 650px;
+         transition: all 0.4s ease;
+      }
+
+      .goldenDiv:hover {
+        cursor: pointer;
+      }
+
+
+      
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=delete" />
+  </head>
+  <body>
+    <div>
+    <input id="number" type="number" placeholder="multiple of_____"> 
+    <input id="greater" type="number"  placeholder="greater than____">
+    <input id="less" type="number" placeholder="less than____">
+
+      <h1 class="title">Find all the multiples of <span>[3]</span> that are greater than <span id="greatt">200</span> and less than <span id="les">400</span><h1>
+    <button onclick="findN()"> FIND </button>
+    
+    <p id="allNumbers">
+
+      
+    </p>
+  </div>
+
+    <div style="background-color: rgb(228, 228, 228);">
+      <h1>Random Quote Generator</h1>
+      <p style="color: transparent; background-size: 200%; background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 0, 212), rgb(140, 0, 255));
+      background-clip: text; animation: gradient linear infinite 1s;" id="randomQuote"> </p>
+      <button onclick="randomQuote()">GENERATE</button>
+    </div>
+     
+
+
+    <div style="background-color: #f0f0f0;">
+      <h1> Rock Paper Scissors</h1>
+      <p> <span id="result"> </span></p>
+      <button id="rock" class="rocksBtn">
+        ROCK
+      </button>
+      <button id="paper" class="rocksBtn">
+        PAPER
+      </button>
+      <button id="scissor" class="rocksBtn">
+        SCISSOR
+      </button>
+      <h3> The computer chooses: <span id="computerD"> </span></h3>
+    </div>
+
+
+    <div style="background-color: rgb(228, 228, 228);">
+      <h1> Multiplication Table</h1>
+      <input id="num" type="number" placeholder="Enter a number">
+
+      <p id="table"></p>
+      <button onclick="findMT()"> FIND</button>
+    </div>
+
+
+    <div  style="background-color: #f0f0f0;">
+        <h1> Fizzbuzz</h1>
+        <p> Display all numbers from 1-100. If they're divisible by 3, replace the number with "fizz". If they're
+          divisible by 5, replace the number with "buzz". If they're divisible by both, replace the number with "fizzbuzz".</p>
+        </p>
+
+        <input id="fbInput" type="number" placeholder="From 1 to___" min="3" max="9999999999">
+        <button onclick="fizzbuzz()"> FIND</button>
+        <button id="btnClose" style="background-color: #dd8484; border: none; transform: scale(0.7);  display: none;" onclick="location.reload()">
+           CLOSE
+          </button>
+        <p style="max-width: 10px;" id="fizzbuz"></p>
+    </div>
+
+    <div style="background-color: rgb(228, 228, 228); height: 150px;">
+      <h1> Temperature Convertor</h1>
+       
+          <select id="tempSelect" style="border-radius: 6px; border: 1px solid rgba(0, 0, 0, 0.507); height: 24px;">
+            <option value="C1">Celsius </option>
+            <option value="F1">Fahrenheit</option>
+            <option value="K1">Kelvin</option>
+          </select>
+          <input id="tempInput" type="number" placeholder="Enter Value" style="position: absolute; margin-top: 40px;
+          width: 5%; font-size: 14px; margin-left: -95px; border-radius: 2px; border: 1px solid black;">
+
+          <h2 style="margin-top: -6px; margin-left: 115px;"> TO</h2>
+          <select id="tempSelect2" style="border-radius: 6px; border: 1px solid rgba(0, 0, 0, 0.507); height: 24px; position: absolute;
+          margin-top: -65px; margin-left: 180px;">
+            <option value="C2">Celsius </option>
+            <option value="F2">Fahrenheit</option>
+            <option value="K2">Kelvin</option>
+          </select>
+          <input disabled type="number" id="tempInput2" placeholder="Result" style="position: absolute; margin-top: -65px; margin-left: 181px;
+          width: 4%; margin-top: -27px;  background-color:white; border: 1px solid black; ">
+
+          <button onclick="convert()" id="btnConvert" style="position: absolute; margin-top: -55px; margin-left: 290px; background-color: #84a8dd; border: none; transform: scale(0.8);">
+            CONVERT
+          
+        
+     </div>
+
+
+     <div style="background-color: #f0f0f0;">
+        <h1>Password Strength</h1>
+
+        <input id="inpS" onchange="passStren()" placeholder="Password" style="width: 30%; border-radius: 7px; height: 35px; border: none; 
+        background-color: #dacdc1; padding-left: 10px;" type="text">
+        <h3 style="font-size: 28px; transition: all ease 0.3s; color: rgb(255, 0, 0);"> Password is <span id="strength">0%</span> strong</h3>
+     </div>
+
+
+
+     <div style="background-color: rgb(228, 228, 228); height: 380px; transition: all ease 2s;">
+        <h1> How are you feeling?</h1>
+
+        <p id="1" class="emojis" style="font-size: 110px; border-radius: 100%; position: absolute; "> &#128545;</p>
+        <p id="2" class="emojis" style="font-size: 110px; border-radius: 100%; position: absolute; margin-left: 240px"> &#128546;</p>
+        <p id="3" class="emojis" style="font-size: 110px; border-radius: 100%; position: absolute;  margin-left: 480px"> &#128528;</p>
+        <p id="4" class="emojis" style="font-size: 110px; border-radius: 100%; position: absolute;  margin-left: 720px"> &#128524;</p>
+        <p id="5" class="emojis" style="font-size: 110px; border-radius: 100%; position: absolute;  margin-left: 960px"> &#128513;</p>
+ 
+
+     </div>
+
+
+     <div style="background-color: #f0f0f0;">
+      <h1> You've visited this page <span style="color: transparent; background-image: linear-gradient(to right, rgb(0, 255, 128), rgb(63, 197, 238), rgb(90, 106, 196));
+      background-clip: text; background-size: 200%; animation: grad 4s infinite linear;"  id="visitedTimes"> 00 </span> times. </h1>
+
+     </div>
+
+     <div style="background-color: rgb(228, 228, 228); transition: all ease 2s;">
+      <h1> Word scrambler</h1>
+      <input onchange="document.getElementById('repeatedT').textContent = '0'" type="text" id="word" placeholder="Enter a word">
+      <button onclick="scramb()" id="btnScramble" style="background-color: #84a8dd; border: none; transform: scale(0.8); margin-left: 210px; margin-top: -28px;"> SCRAMBLE</button>
+      <p id="scrambled"></p>
+      <p> Repeated times: <span id="repeatedT">0</span></p>
+      </div>  
+
+
+      <div style="background-color: #f0f0f0; " >
+          <h1>Magic Ball</h1>
+          <p> Ask a question and click the button to get an answer.</p>
+
+          <input id="question" type="text" placeholder="Ask a question">
+
+          <button onclick="rollBall()" id="btnAsk" style="background-color: #84ddb4; border: none; transform: scale(0.8); margin-left: 210px; margin-top: -28px;"> ASK</button>
+
+          <p id="answer" style="font-size: 20px; color: #555;"></p>
+
+          <div style="box-shadow: none; background-color: #333; width: 10%; height: 180px; border-radius: 100%; transform: scale(1.5);  margin-left: 520px;">
+            <div id="centerD"  style="box-shadow: none; background-color: #c7c5c5; width: 10%; height: 10%; border-radius: 100%; transform: scale(1.5); margin-left: 27%; margin-top: 27%; transition: all ease 0.3s;">
+                <h2 id="answ" style="color: transparent; background-image: linear-gradient(to left, rgb(255, 0, 0), rgb(212, 0, 255) ,rgb(98, 0, 255)); background-clip: text; background-size: 200%;
+                animation: grad 5s infinite linear; margin-left: -0.1px; margin-top: -5px; position: absolute;"> ? </h2>
+            </div>
+
+          </div>
+          <p style="visibility: hidden;"> dfasds</p>
+
+      </div>
+
+
+
+      <div style="background-color: rgb(228, 228, 228); transition: all ease 2s;">
+        <h1> Internet Speed Test</h1>
+
+        <p style="font-size: 75px; margin-left: 110px;" id="resultInternet"> NaN</p>
+        <span  style="font-size: 36px; margin-left: 260px; margin-top: -165px; position: absolute;"> Mbps</span>
+        
+        <button onclick="internetSpeed()" id="btnTest" style="background-color: #ee5959; border: none; transform: scale(1.2); margin-left: 141px; margin-top: -28px;"> TEST</button>
+
+      </div>
+
+      <div style="background-color: #f0f0f0; height: 280px;" >
+
+        <h1> Generate a pfp with your initials.</h1>
+        <input placeholder="Full Name" id="gmailN" type="text">
+        <button style="margin-left: 22px;" onclick="getPfp()"> GENERATE</button>
+
+
+        <div id="imgPfp" style="height: 110px; width: 6%; background-color: rgb(173, 69, 69); border-radius: 100%; position: absolute; margin-top: -100px; margin-left: 280px; display: none; "> 
+          <p id="displayN" style="font-size: 65px; font-weight: 500; color: white; letter-spacing: 5px; margin-top: 20px; text-align: center;"> LA</p>
+        </div>
+        </div>  
+
+        <div id="colorsDiv" style="background-color: rgb(228, 228, 228); transition: all ease 2s;">
+            <h1 > CSS Gradient Generator</h1>
+            <mark style="background-color: transparent;" id="colors">
+            <input class="colorChange" type="color" value="#ff0000">
+            <input class="colorChange" type="color" value="#b700ff">
+  
+           </mark>
+            <input onclick="addCI()" type="button" style="border-radius: 11px;  height: 31px; border: none; background-color: #333; color: white;
+            margin-top: -45px; width: 1.7%; cursor: pointer;"  value="+"> 
+
+            <button id="right" class="btnTop">RIGHT</button>
+            <button id="top" style="margin-left: 90px;" class="btnTop">TOP</button>
+
+            <input max="700" min="1" onchange="banner.style.height = this.value + 'px'" style="margin-top: 48px; position: absolute; margin-left: 30px;" type="number" placeholder="HEIGHT: 185px">
+           
+           <div id="banner" style="width: 70%; height: 185px; background-image: linear-gradient(to right, #ff0000, #b700ff); margin-top: 60px;">
+
+           </div>
+
+           <textarea id="textACode" title="Code" disabled style="width: 42%; height: 100px; margin-left: 35px; background-color: #171717; border: 4px solid #525252; color: white; padding-top: 30px;" >
+     background-image: linear-gradient(to right, #ff0000, #b700ff));
+           </textarea>
+          </div>
+
+          <div style="background-color: #f0f0f0; height: 280px;" >
+            <h1>Find all perfect squares</h1>
+           
+            <input id="minSN" type="number" placeholder="greater than____">
+            <input id="maxSN" placeholder="less than____" type="number">
+            <button onclick="squareN()" style="margin-left: 40px;"> FIND</button>
+            <p id="squareNumbersP"> </p>
+          </div>
+
+      <div>
+          <h1> Average Grade Calculator</h1>
+          <p> Enter the subject and the <span style="font-weight: bold;">number</span> grade on the inputs like this: <span style="font-weight: bold;">math;10</span> // 
+          or just enter a number.</p>
+          <div id="subjectsDiv" style="display: flex; flex-direction: column; margin-left: -20px; width: 8%;">
+          <input class="subjects" placeholder="math;0" type="text">
+          <input class="subjects" type="text" placeholder="english;0">
+          <input class="subjects" type="text" placeholder="history;0">
+          <input class="subjects" type="text" placeholder="geography;0">
+          <input class="subjects" type="text" placeholder="science;0">
+          <input class="subjects" type="text" placeholder="art;0">
+          </div>
+          <button id="deleteBtnSubject" style="transform: scale(0.8); position: absolute; margin-top: -12px; margin-left: 20px; background-color: #ff5252;border-radius: 8px;
+          color: white; border: none;">DELETE</button>
+
+          <button id="findGpaBtn" style="width: 5%; margin-left: 212px; margin-top: -170px; position: absolute; transform: scale(0.8);font-size: 17px; height: 55px;
+          background-color: #171717; color: white; border-radius: 8px; transition: all 0.3s ease;">FIND GPA</button>
+          <button id="addMoreBtn" style="width: 5%; margin-left: 212px; margin-top: -230px; position: absolute; transform: scale(0.8);
+          background-color: rgb(161, 184, 157); color:#171717; border-radius: 8px; border: none; transition: all 0.3s ease;">ADD MORE</button> 
+
+
+          <h2 style="position: absolute; margin-top: -190px; margin-left: 370px; font-size: 44px; max-width: 370px;">Your Grade Average is 
+            <span id="notesSpan" style="color: transparent; background-image: linear-gradient(to right, rgb(255, 0, 55), rgb(255, 0, 234), rgb(153, 0, 255)); background-clip: text; animation: gradient 5s linear infinite;
+            background-size: 500%;">0</span></h2>
+        </div>
+
+
+        <div style="background-color: rgb(228, 228, 228); transition: all ease 2s;">
+            <h1>Random Name Chooser</h1>
+            <p>If you add ; to a name, it will be chosen first. <span onclick="this.parentElement.style.display = 'none'" style="text-decoration: underline; cursor: pointer;"> <i>HIDE</i></span></p>
+
+           <mark id="markNames" style="display: flex; flex-direction: column; background-color: transparent; width: 10%;">
+            <input class="namesSpin" placeholder="1st name" type="text">
+            <input class="namesSpin" placeholder="2nd name" type="text">
+            <input class="namesSpin" placeholder="3rd name" type="text">
+           </mark>
+           <button onclick="let node = document.createElement('input'); node.setAttribute('class', 'namesSpin'); node.placeholder = 'Name';
+           markNames.appendChild(node)" style="transform: scale(0.8); margin-left: -10px; position: absolute;"> ADD </button>
+
+          <span onclick="if(markNames.childElementCount > 2) { markNames.lastChild.remove()} else {alert('2 Minimum')}" style="position: absolute;margin-top: 30px; transform: scale(1.6); margin-left: 72px; color: rgb(85, 0, 0); cursor: pointer;" class="material-symbols-outlined">
+            delete
+            </span>
+
+            <button onclick="randomName()" style="transform: scale(0.8); margin-left: 100px;"> SPIN </button>
+            <p style="font-size: 32px;"> Chosen name: <span id="chosenName"> </span></p>
+        </div>
+
+        <div id="cookieClickerDiv" style="transition: all ease 0.3s;">
+       
+
+
+          <p>REBIRTHS : <span id="rebirthText">0</span></p>
+          <h1>Cookie Clicker</h1>
+          <p>Oven: level <span id="ovenLevelP">0</span></p>
+          <img id="userOvenImg" style="width: 18%; position:absolute; margin-left: -35px; margin-top: -55px; display: none;" src="https://i.ibb.co/Hp7Q932d/1st-oven.png" alt="">
+       
+          <img id="cookie" style="width: 15%; margin-left: 450px; cursor: pointer;  transition: all ease 0.3s;" src="https://static.vecteezy.com/system/resources/previews/035/490/024/non_2x/ai-generated-cookie-clipart-design-illustration-free-png.png" alt="">
+          <p style="margin-left: 515px; font-size: 30px;">COOKIES : <span id="clicks"> 0</span></p>
+
+      
+          
+
+          <div id="cookieContainer" style="width: 11%; height: 250px; background-color: #cfcac3; margin-top: -340px; margin-left: 850px; overflow-y: scroll; overflow-x: hidden; ">
+                  
+              <div class="buyButtonsCookie">
+                      <p class="pBuyBtn" > X2 COOKIES</p> 
+                      <button id="x2Clicks" class="bBuyBtn"> 50 COOKIES</button>
+                 </div>
+                  <div class="buyButtonsCookie">
+                      <p style="margin-left: -20px;" class="pBuyBtn"> +5 COOKIES/s</p> 
+                      <button id="5clicksS" class="bBuyBtn"> 250 COOKIES</button>
+                  </div>
+                  <div class="buyButtonsCookie">
+                    <p style="margin-left: -50px; font-size: 18px;" class="pBuyBtn"> GOLDEN FINGER 10s</p> 
+                    <button id="goldenFinger" class="bBuyBtn"> 550 COOKIES</button>
+                </div>
+                <div id="criticalHit" style="display: none;" class="buyButtonsCookie">
+                  <p style="margin-left: -35px; " class="pBuyBtn"> CRITICAL HIT x5</p> 
+                  <button id="criticalHitt" class="bBuyBtn"> 1K COOKIES</button>
+              </div>
+              <div id="cookies50S" style="display: none;" class="buyButtonsCookie">
+                <p style="margin-left: -35px; " class="pBuyBtn"> 50 COOKIES/s</p> 
+                <button id="droneCookie" class="bBuyBtn"> 3K COOKIES</button>
+            </div>
+            <div id="autoclickerDiv" style="display: none;" class="buyButtonsCookie">
+              <p style="margin-left: -35px; " class="pBuyBtn"> SLOW AUTOCLICKER</p> 
+              <button id="autoclickerSlow" class="bBuyBtn"> 1.75K COOKIES</button>
+          </div>
+
+          <div id="realisticCookie" style="display: none;" class="buyButtonsCookie">
+            <p style="margin-left: -35px; " class="pBuyBtn"> REALISTIC COOKIE</p> 
+            <button id="realisticCookieBtn" class="bBuyBtn"> 750 COOKIES</button>
+        </div>
+        <div id="goldenFingerDiv2" style="display: none;" class="buyButtonsCookie">
+          <p style="margin-left: -50px; font-size: 18px;" class="pBuyBtn"> GOLDEN FINGER 15s</p> 
+          <button id="goldenfinger2" class="bBuyBtn"> 4K COOKIES</button>
+      </div>
+
+          <div id="crumblCookie1" style="display: none;" class="buyButtonsCookie">
+            <p style="margin-left: -50px; font-size: 16px;" class="pBuyBtn"> CHERRY CRUMBL COOKIE</p> 
+            <button id="crumblCookie1Btn" class="bBuyBtn"> 3000 COOKIES</button>
+        </div>
+        <div id="autoclicker2Div" style="display: none;" class="buyButtonsCookie">
+          <p style="margin-left: -25px; " class="pBuyBtn"> FAST AUTOCLICKER</p> 
+          <button id="autoclicker2" class="bBuyBtn"> 12K COOKIES</button>
+      </div>
+
+      <div id="boostBakeryDiv" style="display: none;" class="buyButtonsCookie">
+        <p style="margin-left: -33px; font-size: 15px;" class="pBuyBtn">BOOST BAKERY <SPAN style="font-weight: bold;"> x50%</SPAN> </p> 
+        <button id="boostBakery" class="bBuyBtn"> 8K COOKIES</button>
+      </div>
+
+
+      <div id="diamondFingerDiv" style="display: none;" class="buyButtonsCookie">
+        <p style="margin-left: -35px;" class="pBuyBtn">DIAMOND FINGER 10s</p> 
+        <button id="diamondFinger" class="bBuyBtn"> 22K COOKIES</button>
+    </div>
+
+    <div id="cursorDiv2" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: 2px;" class="pBuyBtn">CURSOR</p> 
+      <button id="cursor2" class="bBuyBtn"> 30K COOKIES</button>
+    </div>
+
+
+    <div id="criticalHit2" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -22px;" class="pBuyBtn">CRITICAL HIT</p> 
+      <button id="criticalHit2Btn" class="bBuyBtn"> 15K COOKIES</button>
+    </div>
+
+
+    <div id="fiveTimesDiv" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -22px;" class="pBuyBtn">X5 COOKIES</p> 
+      <button id="fiveTimesBtn" class="bBuyBtn"> 30K COOKIES</button>
+    </div>
+
+    <div id="crumblCookieDiv2" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -39px;" class="pBuyBtn">CRUMBL COOKIE</p> 
+      <button id="crumblCookie2" class="bBuyBtn"> 25K COOKIES</button>
+    </div>
+
+    <div id="boostFactoryDiv" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -33px; font-size: 15px;" class="pBuyBtn">BOOST FACTORY <SPAN style="font-weight: bold;"> x50%</SPAN> </p> 
+      <button id="boostFactory" class="bBuyBtn"> 20K COOKIES</button>
+    </div>
+
+
+
+    <div id="diamondFingerDiv2" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -30px; font-size: 17px;" class="pBuyBtn">DIAMOND FINGER </p> 
+      <p style=" margin-top: -20px; margin-left: 48px;">2</p>
+      <button id="diamondFinger2" class="bBuyBtn"> 42K COOKIES</button>
+    </div>
+
+
+    <div id="crumblCookieDiv3" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -39px;" class="pBuyBtn">CRUMBL COOKIE</p> 
+      <button id="crumblCookie3" class="bBuyBtn"> 30K COOKIES</button>
+    </div>
+
+    <div id="criticalHit3" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -22px;" class="pBuyBtn">CRITICAL HIT</p> 
+      <button id="criticalHit3Btn" class="bBuyBtn"> 25K COOKIES</button>
+    </div>
+
+
+    <div id="multiplierClicks3Div" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -45px;" class="pBuyBtn">X2 <SPAN style="font-weight: bold;">TOTAL</SPAN> CLICKS</p> 
+      <button id="multiplierClicks3" class="bBuyBtn"> 60K COOKIES</button>
+    </div>
+
+
+
+    <div id="rubyFingerDiv2" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -15px; font-size: 17px;" class="pBuyBtn">RUBY FINGER </p> 
+      <p style=" margin-top: -20px; margin-left: 48px;">2</p>
+      <button id="rubyFinger2" class="bBuyBtn"> 70K COOKIES</button>
+    </div>
+
+      <div id="autoclicker3Div" style="display: none;" class="buyButtonsCookie">
+        <p style="margin-left: -25px; " class="pBuyBtn"> FAST AUTOCLICKER</p> 
+        <button id="autoclicker3" class="bBuyBtn"> 65K COOKIES</button>
+    </div>      
+
+    <div id="boostWorldDiv" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -33px; font-size: 15px;" class="pBuyBtn">BOOST WORLD <SPAN style="font-weight: bold;"> x50%</SPAN> </p> 
+      <button id="boostWorld" class="bBuyBtn"> 75K COOKIES</button>
+    </div>
+
+    
+    <div id="crumblCookieDiv4" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -32px;" class="pBuyBtn">OREO COOKIE</p> 
+      <button id="crumblCookie4" class="bBuyBtn"> 62K COOKIES</button>
+    </div>
+
+    <div id="goldenCookiesDiv" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -52px; font-size: 16px;" class="pBuyBtn">DROP GOLDEN COOKIES</p> 
+      <button id="goldenCookies" class="bBuyBtn"> 85K COOKIES</button>
+    </div>
+
+
+
+    <div id="emeraldFingerDiv" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -30px; font-size: 17px;" class="pBuyBtn">EMERALD FINGER </p> 
+      <button id="emeraldFinger" class="bBuyBtn"> 125K COOKIES</button>
+    </div>
+
+
+    <div id="unlockBlackHoleDiv" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -42px; font-size: 15px;" class="pBuyBtn">UNLOCK BLACK HOLE</p> 
+      <button id="unlockBlackHole" class="bBuyBtn"> 175K COOKIES</button>
+    </div>
+
+    <div id="crumblCookieDiv5" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -30px; font-size: 19px;" class="pBuyBtn">DONUT COOKIE</p> 
+      <button id="crumblCookie5" class="bBuyBtn"> 85K COOKIES</button>
+    </div>
+
+    <div id="moonDiv" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -32px; font-size: 18px;" class="pBuyBtn">COLONIZE MOON</p> 
+      <button id="moon" class="bBuyBtn"> 135K COOKIES</button>
+    </div>
+
+
+
+    <div id="jadeFingerDiv" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -10px; font-size: 17px;" class="pBuyBtn">JADE FINGER </p> 
+      <button id="jadeFinger" class="bBuyBtn"> 290K COOKIES</button>
+    </div>
+
+    <div id="boostUniDiv" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -33px; font-size: 15px;" class="pBuyBtn">BOOST UNIVERSE <SPAN style="font-weight: bold;"> x50%</SPAN> </p> 
+      <button id="boostUni" class="bBuyBtn"> 275K COOKIES</button>
+    </div>
+
+    <div id="spotifyDiv" style="display: none; background-color: transparent; background-image: linear-gradient(to right, #1db954, #191414); background-clip: background;
+    background-size: 200%; animation: gradient 8s infinite; color: white;" class="buyButtonsCookie">
+      <p style="margin-left: -15px; font-size: 19px;" class="pBuyBtn">SPOTIFY APP </p> 
+      <button id="spotify" class="bBuyBtn"> 300K COOKIES</button>
+    </div>
+
+    <div id="santasDiv" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -15px; font-size: 17px;" class="pBuyBtn">SANTA'S OVEN </p> 
+      <button id="santas" class="bBuyBtn"> 350K COOKIES</button>
+    </div>
+
+    <div id="crumblCookieDiv6" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -30px; font-size: 19px;" class="pBuyBtn">GINGERBREAD COOKIE</p> 
+      <button id="crumblCookie6" class="bBuyBtn"> 250K COOKIES</button>
+    </div>
+
+    <div id="goldenCookiesDiv2" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -52px; font-size: 16px;" class="pBuyBtn">MORE GOLDEN COOKIES</p> 
+      <button id="goldenCookies2" class="bBuyBtn"> 285K COOKIES</button>
+    </div>
+
+    <div id="quartzFingerDiv" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -10px; font-size: 17px;" class="pBuyBtn">QUARTZ FINGER </p> 
+      <button id="quartzFinger" class="bBuyBtn"> 500K COOKIES</button>
+    </div>
+
+    
+    
+    <div id="microsoftDiv" style="display: none; background-color: transparent;background: linear-gradient(to right, #F25022, #FFB900); background-clip: background;
+    background-size: 200%; animation: gradient 8s infinite; color: white;" class="buyButtonsCookie">
+      <p style="margin-left: -10px; font-size: 19px;" class="pBuyBtn">MICROSOFT </p> 
+      <button id="microsoft" class="bBuyBtn"> 600K COOKIES</button>
+    </div>
+
+    <div id="galacticDiv" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -15px; font-size: 17px;" class="pBuyBtn">GALACTIC INGREDIENTS </p> 
+      <button id="galactic" class="bBuyBtn"> 550K COOKIES</button>
+    </div>
+
+    <div id="heatDiv" style="display: none; background-image: url('https://png.pngtree.com/png-clipart/20230312/original/pngtree-fire-vector-background-png-image_8984857.png');
+    background-size: 100%; background-repeat: no-repeat; background-position-y: bottom;  " class="buyButtonsCookie">
+      <p style="margin-left: -22px; font-size: 17px; font-weight: bold;" class="pBuyBtn">HEAT AMPLIFIER </p> 
+      <button id="heat" class="bBuyBtn"> 875K COOKIES</button>
+    </div>
+
+    <div id="cometDiv" style="display: none; background-image: url('https://media.istockphoto.com/id/165966456/vector/vector-meteor-star-shower-falling-skies.jpg?s=612x612&w=0&k=20&c=0VFCB6p4ajUxGSoBwi6tIGTlj8skC_umFsSsBgQQY-E=');
+    background-size: 100%; background-repeat: no-repeat; background-position-y: bottom;  " class="buyButtonsCookie">
+      <p style="margin-left: -27px; font-size: 17px; font-weight: bold; color: white;" class="pBuyBtn">COMET SHOWER </p> 
+      <button id="comet" class="bBuyBtn"> 800K COOKIES</button>
+    </div>
+
+    <div id="meteorDiv" style="display: none; background-image: url('https://thumbs.dreamstime.com/b/d-illustration-flaming-asteroid-crashes-earth-k-realistic-science-fiction-art-elements-image-provided-nasa-307127695.jpg');
+    background-size: 100%; background-repeat: no-repeat; background-position-y: bottom;  " class="buyButtonsCookie">
+      <p style="margin-left: 11px; font-size: 17px; font-weight: bolder; color: white;" class="pBuyBtn">METEOR </p> 
+      <button style="margin-top: -7px;" id="meteor" class="bBuyBtn"> 1M COOKIES</button>
+    </div>
+
+    <div id="randomPlanetDiv" style="display: none; background-image: url('https://cdn.mos.cms.futurecdn.net/v2/t:0,l:281,cw:1682,ch:1262,q:80,w:1682/XWHWS5Y697Ddh7Dw3QCwW.jpg');
+    background-size: 100%; background-repeat: no-repeat; background-position-y: bottom;  " class="buyButtonsCookie">
+      <p style="margin-left: -30.5px; font-size: 17px; font-weight: bolder; color: white; " class="pBuyBtn">RANDOM PLANET </p> 
+      <button style="margin-top: -7px; height: 45px; margin-top: 20px;" id="randomPlanet" class="bBuyBtn"> 1.5M COOKIES</button>
+    </div>
+
+    <div id="ameFingerDiv" style="display: none;" class="buyButtonsCookie">
+      <p style="margin-left: -30px; font-size: 16px;" class="pBuyBtn">AMETHYST FINGER </p> 
+      <button id="ameFinger" class="bBuyBtn"> 4M COOKIES</button>
+    </div>
+
+
+    <div id="appleDiv" style="display: none; background-color: transparent;background: linear-gradient(135deg,
+    #f5f5f7, /* Silver */
+    #1d1d1f, /* Space Gray */
+    #2e3641  /* Midnight */ ); background-clip: background;
+    background-size: 200%; animation: gradient 8s infinite; color: white;" class="buyButtonsCookie">
+      <p style="margin-left: 10px; font-size: 22px; font-weight: bold;" class="pBuyBtn">APPLE </p> 
+      <button id="apple" class="bBuyBtn"> 2M COOKIES</button>
+    </div>
+
+    
+    <div id="superpositionDiv" style="display: none; background-image: url('https://www.thebrighterside.news/uploads/2025/01/qua-1.webp?format=auto&optimize=high&width=1440');
+    background-size: 100%; background-repeat: no-repeat; background-position-y: bottom; background-repeat: repeat; " class="buyButtonsCookie">
+      <p style="margin-left: -29px; font-size: 18px; color: white;" class="pBuyBtn"> SUPERPOSITION </p> 
+      <p style="font-size: 18px; margin-top: -20px; min-width: 600px;  color: white; margin-left: 10px;"> CLICKS</p>
+      <button style=" height: 45px; margin-top: -20px; opacity: 0.8;" id="superposition" class="bBuyBtn"> 3M COOKIES</button>
+    </div>
+
+    <div id="wiskDiv" style="display: none; background-image: url('https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1024x768_scale,f_auto,q_auto:best/newscms/2018_22/2451826/180601-atomi-mn-1540.jpg');
+    background-size: 100%; background-repeat: no-repeat; background-position-y: bottom; background-repeat: repeat; " class="buyButtonsCookie">
+      <p style="margin-left: -29px; font-size: 18px; color: white;" class="pBuyBtn"> QUANTUM WISK </p> 
+      <button style=" height: 45px; margin-top: -20px; opacity: 0.8;" id="wisk" class="bBuyBtn"> 1.5M COOKIES</button>
+    </div>
+
+    <div id="quantumnOvenDiv" style="display: block; background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR450JnYeKDLRo3LnLQPl9nZ2-er2v7ven-4VQa9afNRPthPHmDw-PvIP1onqsrSNzkyCo&usqp=CAU');
+    background-size: cover; background-repeat: no-repeat; background-position-y: bottom; background-repeat: repeat; " class="buyButtonsCookie">
+      <p style="margin-left: -29px; font-size: 18px; color: white;" class="pBuyBtn"> QUANTUM OVEN </p> 
+      <button style=" height: 45px; margin-top: -20px; opacity: 0.8;" id="quantumnOven" class="bBuyBtn"> 2.25M COOKIES</button>
+    </div>
+
+
+
+        <div  id="bakeryDiv" style="display: block; background-color: #c09eb3;" class="buyButtonsCookie">
+          <p style="margin-left: -50px; font-size: 18px;" class="pBuyBtn"> BAKERY <span style="font-size: 15px;"> 30 COOKIES/s</span></p> 
+          <button id="bakeryBtn" class="bBuyBtn"> 2500 COOKIES</button>
+      </div>
+      <div id="factoryDiv" style="display: none; background-color: #c09eb3;" class="buyButtonsCookie">
+        <p style="margin-left: -50px; font-size: 18px;" class="pBuyBtn"> FACTORY <span style="font-size: 13px;"> 175 COOKIES/s</span></p> 
+        <button id="factoryBtn" class="bBuyBtn"> 15K COOKIES</button>
+    </div>
+      <div id="droneDiv" style="display: none; background-color: #c09eb3;" class="buyButtonsCookie">
+      <p style="margin-left: -50px; font-size: 18px;" class="pBuyBtn"> DRONE <span style="font-size: 13px;"> 400 COOKIES/s</span></p> 
+      <button id="droneBtn" class="bBuyBtn"> 40K COOKIES</button>
+      </div>
+      <div id="worldDiv" style="display: none; background-color: #c09eb3;" class="buyButtonsCookie">
+        <p style="margin-left: -25px; font-size: 18px;" class="pBuyBtn"> COOKIE WORLD </p> 
+        <p style="font-size: 13px; margin-top: -20px; min-width: 600px; "> 1K COOKIES/s</p>
+        <button id="worldBtn" class="bBuyBtn"> 90K COOKIES</button>
+        </div>
+        <div id="universeDiv" style="display: none; background-color: #c09eb3;" class="buyButtonsCookie">
+          <p style="margin-left: -25px; font-size: 18px;" class="pBuyBtn"> COOKIE UNIVERSE </p> 
+          <p style="font-size: 13px; margin-top: -20px; min-width: 600px; "> 15K COOKIES/s</p>
+          <button id="universeBtn" class="bBuyBtn"> 800K COOKIES</button>
+          </div>
+          <div id="blackHoleDiv" style="display: none; background-color: #c09eb3;" class="buyButtonsCookie">
+            <p style="margin-left: -25px; font-size: 18px;" class="pBuyBtn"> BLACK HOLE </p> 
+            <p style="font-size: 13px; margin-top: -20px; min-width: 600px; "> 55K COOKIES/s</p>
+            <button id="blackHole" class="bBuyBtn"> 2.17M COOKIES</button>
+            </div>
+          
+          </div>
+      
+
+    <p style="position: absolute; margin-top: -340px; margin-left: 1330px; font-weight: bold;"> OVEN LEVELS: 1/2/3/4</p>
+
+    <div style="width: 10%; height: 200px; margin-left: 1300px; margin-top: -310px; box-shadow: none; background-color: #dfc28379;">
+      <img id="eggImg" style="margin-left: -10px; transition: all 0.9s ease; margin-top: 0px; position: absolute;" src="https://static.vecteezy.com/system/resources/thumbnails/055/235/435/small/golden-egg-on-red-award-pillow-easter-gold-egg-game-symbol-png.png" alt="">
+      <button id="eggbtn" onclick="openEgg()" style="width: 135%; margin-left: -30px; border: none; border-radius: 8px; background-color: #171717; color: white;
+      transition: 0.3s all ease; cursor: pointer; height: 40px; font-weight: bold; font-size: 20px; margin-top: 225px;">OPEN 35K</button>
+    </div>
+
+
+          <button onclick="rebirthFn()" id="rebirthBtn" style="border-radius: 8px; border: none; color: white; background-color: rgb(238, 85, 169); margin-left:  480px;
+          width: 14%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; letter-spacing: 2px;
+          margin-top: 50px; transition: all 0.3s ease; display: none;"> REBIRTH 3M </button>
+
+          
+          <div id="appsDiv" style="display: none;  background-color: #dfdbdb; margin-top: 80px; grid-template-columns: repeat(8, 1fr);">
+
+          </div>
+
+          <div id="facilities" style="display: grid;  background-color: #dfdbdb; margin-top: 60px; grid-template-columns: repeat(16, 1fr); ">
+ 
+          </div>
+            
+         
+          <div id="blurCookieDiv" style="background-color: rgb(49, 1, 138); position: absolute; width: 150px; height: 150px; border-radius: 100%; margin-top: -400px; margin-left: 485px; 
+          filter: blur(0px); transition: all ease 1s; z-index: -1; "></div>
+       
+    
+          
+     <script>
+
+      let clicksMultiplier = 1 + (Number(localStorage.getItem("rebirthsTr")) * 15)
+      let userClicks = 25500000
+      let secondClicks = 0
+      let criticalFactor = 5
+      let eggPrice = 35000
+
+
+
+      let cursorPrice = 30000
+
+
+
+      let spotifyCatalog = 0;
+      let microsoftCatalog = 0;
+      let appleCatalog = 0;
+
+      let rebirthPrice = localStorage.getItem("rebirthPrice") || 3000000
+      rebirthBtn.textContent = "REBIRTH " + rebirthPrice
+      function rebirthFn() {
+        if(userClicks >= rebirthPrice) {
+          location.reload()
+          
+          rebirthBtn.textContent = "REBIRTH " + rebirthPrice 
+          localStorage.setItem("rebirthsTr", Number(localStorage.getItem("rebirthsTr")) + 1)
+          localStorage.setItem("rebirthPrice", rebirthPrice * 2.5)
+        }
+        else {
+          alert("Not enough")
+        }
+      }
+      
+      rebirthText.textContent = localStorage.getItem("rebirthsTr")
+
+
+
+      ////OVEN EGG//////
+      clicks.textContent = userClicks
+      function openEgg() {
+        eggImg.style.marginTop = "0px"
+        eggImg.style.transform = "scale(1)"
+        eggImg.style.filter = "blur(0px)"
+        eggImg.src ="https://static.vecteezy.com/system/resources/thumbnails/055/235/435/small/golden-egg-on-red-award-pillow-easter-gold-egg-game-symbol-png.png"
+        eggImg.style.marginLeft = "-10px"
+
+
+        if(userClicks >= eggPrice) {
+          userClicks = userClicks - eggPrice
+          eggPrice = eggPrice * 1.5
+          eggbtn.textContent = "OPEN " + eggPrice + "$"
+        
+          clicks.textContent = userClicks
+          setTimeout(() => {
+          let userOven = ""
+        let ovens = ["1", "1", "1", "1",
+                    "2", "2", "2",
+                      "3", "3", "3", 
+                       "4"]
+
+        let rO = parseInt(Math.random()*ovens.length)
+        if(rO <= 3) {
+          userOven = "1"        }
+        else if(rO<=6 && rO >= 4) {
+          userOven = "2"
+        }
+        else if(rO <= 9 && rO >= 7) {
+          userOven = "3"
+        }
+        else if(rO == "10") {
+          userOven = "4"
+
+        }
+
+        if(userOven === "1") {
+           userOvenImg.style.transform = "scale(0.8)"
+          setTimeout(() => {
+              userOvenImg.src = "https://i.ibb.co/Hp7Q932d/1st-oven.png"
+            alert("You got a level 1 oven")
+            clicksMultiplier = clicksMultiplier + 5
+          }, 3200);
+        }
+        if(userOven === "2") {
+          userOvenImg.style.transform = "scale(0.8)"
+         setTimeout(() => {
+           userOvenImg.src = "https://i.ibb.co/Q02WmyW/2nd-oven.png"
+          alert("You got a level 2 oven")
+          clicksMultiplier = clicksMultiplier + 15
+         }, 3200);
+        }
+        if(userOven === "3") {
+         setTimeout(() => {
+           userOvenImg.src = "https://i.ibb.co/jvRqp2VC/3rd-oven.png"
+          alert("You got a level 3 oven")
+          clicksMultiplier = clicksMultiplier + 35
+         }, 3200);
+        }
+        if(userOven === "4") {
+          userOvenImg.style.transform = "scale(0.8)"
+          setTimeout(() => {
+             userOvenImg.src = "https://i.ibb.co/nsZRym58/4th-oven.png"
+            alert("You got the best oven!")
+            clicksMultiplier = clicksMultiplier + 90
+          }, 3200);
+        }
+
+        setTimeout(() => {
+
+          eggImg.style.marginTop = "0px"
+        eggImg.style.transform = "scale(1)"
+        eggImg.style.filter = "blur(0px)"
+        eggImg.src ="https://static.vecteezy.com/system/resources/thumbnails/055/235/435/small/golden-egg-on-red-award-pillow-easter-gold-egg-game-symbol-png.png"
+        eggImg.style.marginLeft = "-10px"
+        
+        }, 6000)
+
+       setTimeout(() => {
+         userOvenImg.style.display = "block"
+         ovenLevelP.textContent = userOven
+         eggImg.style.filter = "blur(0px)"
+         eggImg.style.transform = "scale(0.3)"
+         eggImg.style.marginTop = "-220px"
+         eggImg.style.marginLeft = "-230px"
+         eggImg.src = userOvenImg.src
+
+       }, 3200);
+        eggImg.style.transform = "scale(1.15)"
+        eggImg.style.marginTop = "-150px"
+
+        setTimeout(() => {
+          eggImg.style.transition = "ease 0.3s all"
+          eggImg.style.transform = "rotateZ(20deg)"
+          setTimeout(() => {
+            eggImg.style.transform = "rotateZ(-40deg)"
+            setTimeout(() => {
+            eggImg.style.transform = "rotateZ(40deg)"
+            setTimeout(() => {
+            eggImg.style.transform = "rotateZ(-40deg)"
+            setTimeout(() => {
+            eggImg.style.transform = "rotateZ(50deg)"
+            setTimeout(() => {
+            eggImg.style.transform = "rotateZ(-50deg)"
+            setTimeout(() => {
+            eggImg.style.transform = "rotateZ(40deg)"
+            setTimeout(() => {
+            eggImg.style.transform = "rotateZ(-40deg)"
+            setTimeout(() => {
+            eggImg.style.transform = "rotateZ(40deg)"
+            setTimeout(() => {
+            eggImg.style.transform = "rotateZ(-40deg)"
+            setTimeout(() => {
+            eggImg.style.transform = "rotateZ(40deg)"
+            setTimeout(() => {
+            eggImg.style.transform = "rotateZ(-40deg)"
+            setTimeout(() => {
+            eggImg.style.transform = "rotateZ(40deg)"
+            setTimeout(() => {
+            eggImg.style.transform = "rotateZ(-40deg)"
+            setTimeout(() => {
+                eggImg.style.transform = "rotateZ(40deg)"
+                setTimeout(() => {
+            eggImg.style.transform = "rotateZ(0deg)"
+            setTimeout(() => {
+               eggImg.style.transform = "scale(1.2)"
+            setTimeout(() => {
+              eggImg.style.filter = "blur(150px)"
+            }, 20);
+          }, 10);
+
+          }, 50);
+          }, 50);
+          },50);
+          }, 70);
+          }, 70);
+          }, 70);
+          }, 70);
+          }, 70);
+          }, 70);
+          }, 100);
+          }, 100);
+          }, 200);
+          }, 200);
+          }, 200);
+          }, 200);
+        }, 400);
+
+        }, 100);
+        }
+        else {
+          alert("You need more cookies to open the egg")
+        }
+      }
+
+
+
+      let bakeryRe = 30
+ 
+
+      function bakeryFn() {
+        userClicks = userClicks + bakeryRe + (Number(localStorage.getItem("rebirthsTr")) * 15)
+        clicks.textContent = userClicks
+      }
+
+      let factoryRe = 175
+
+      function factoryFn() {
+        userClicks = userClicks + factoryRe +  (Number(localStorage.getItem("rebirthsTr")) * 15)
+        clicks.textContent = userClicks
+      }
+
+      function droneFn() {
+        userClicks = userClicks + 400 + (Number(localStorage.getItem("rebirthsTr")) * 15)
+        clicks.textContent = userClicks
+      }
+
+      let worldRe = 1000
+
+      function worldFn() {
+        userClicks = userClicks + worldRe +  (Number(localStorage.getItem("rebirthsTr")) * 15)
+        clicks.textContent = userClicks
+      }
+
+      let universeRe = 10500
+      function universeFn() {
+        userClicks = userClicks + universeRe + (Number(localStorage.getItem("rebirthsTr")) * 15)
+        clicks.textContent = userClicks
+      }
+
+      let blackHoleRe = 55000
+      function blackHoleFn() {
+        userClicks = userClicks + blackHoleRe + (Number(localStorage.getItem("rebirthsTr")) * 15)
+        clicks.textContent = userClicks
+      }
+
+
+
+      function slowAutoclicker() {
+          userClicks = userClicks +  clicksMultiplier + (Number(localStorage.getItem("rebirthsTr")) * 15)
+          clicks.textContent = parseInt(userClicks)
+        }
+
+      function fastAutoclicker() {
+        userClicks = userClicks +  clicksMultiplier + (Number(localStorage.getItem("rebirthsTr")) * 15)
+        clicks.textContent = parseInt(userClicks)
+      }
+
+
+
+      function clicksSecond() {
+        userClicks = userClicks + secondClicks + (Number(localStorage.getItem("rebirthsTr")) * 15)
+        clicks.textContent = parseInt(userClicks)
+      }
+
+      function criticalHitFn() {
+        let r = parseInt(Math.random()*10)
+        if(r==1) {
+          userClicks = userClicks + clicksMultiplier * criticalFactor
+          clicks.textContent = parseInt(userClicks)
+        }
+      }
+
+      document.querySelectorAll(".bBuyBtn").forEach(b => {
+        b.addEventListener("click", () => {
+          if(b.id == "x2Clicks") {
+          
+          if(userClicks >= 50) {
+              b.parentElement.style.display = "none"
+            userClicks = userClicks - 50
+            clicksMultiplier = clicksMultiplier  + 2
+            clicks.textContent = parseInt(userClicks)
+          }
+    
+        }
+          else if (b.id == "5clicksS") {
+            if(userClicks >= 250) {
+               userClicks = userClicks - 250
+               secondClicks = 5
+               clicks.textContent = parseInt(userClicks)
+               setInterval(clicksSecond, 1000);
+               b.parentElement.style.display = "none"
+               
+            }
+
+        }
+          else if(b.id == "goldenFinger") {
+         
+          if(userClicks >= 550) {
+            b.parentElement.parentElement.parentElement.style.backgroundColor = "#ffde73b4"
+            b.parentElement.parentElement.parentElement.style.filter = "brightness(120%)"
+               b.parentElement.style.display = "none"
+            criticalHit.style.display = "block"
+            cookies50S.style.display = "block"
+            autoclickerDiv.style.display = "block"
+            realisticCookie.style.display = "block"
+            goldenFingerDiv2.style.display = "block"
+            userClicks = userClicks - 550
+            let prevMultiplier = clicksMultiplier
+            clicksMultiplier = 10 + clicksMultiplier
+            setTimeout(() => {
+                clicksMultiplier = prevMultiplier
+                 b.parentElement.parentElement.parentElement.style.backgroundColor = "#f0f0f0"
+                  b.parentElement.parentElement.parentElement.style.filter = "brightness(100%)"
+            }, 10000);
+            clicks.textContent = parseInt(userClicks)
+          }
+          }
+          else if(b.id == "criticalHitt") {
+            if(userClicks >= 1000) {
+              b.parentElement.style.display = "none"
+              userClicks = userClicks - 1000
+              clicks.textContent = userClicks
+              criticalHit.style.display = "none"
+              setInterval(criticalHitFn, 1000);
+            }
+          }
+          else if(b.id == "droneCookie") {
+            if(userClicks >= 3000) {
+               userClicks = userClicks - 3000
+               secondClicks = 50
+                clicks.textContent = userClicks
+               setInterval(clicksSecond, 1000);
+               b.parentElement.style.display = "none"
+               
+            }
+
+          }
+          else if(b.id == "autoclickerSlow") {
+            if(userClicks >= 1750) {
+               userClicks = userClicks - 1750
+                clicks.textContent = userClicks
+               setInterval(slowAutoclicker, 1000);
+               b.parentElement.style.display = "none"
+               
+            }
+          }
+          else if(b.id == "realisticCookieBtn") {
+            if(userClicks >= 750) {
+              clicksMultiplier = clicksMultiplier + 3
+               userClicks = userClicks - 750
+                clicks.textContent = userClicks
+               cookie.src = "https://pngimg.com/d/cookie_PNG13683.png"
+               b.parentElement.style.display = "none"
+               
+            }
+          }
+          else if(b.id == "goldenfinger2") {
+            crumblCookie1.style.display = "block"
+            autoclicker2Div.style.display = "block"
+            diamondFingerDiv.style.display = "block"
+             boostBakeryDiv.style.display = "block"
+            if(userClicks >= 4000) {
+            b.parentElement.style.display = "none"
+            b.parentElement.parentElement.parentElement.style.backgroundColor = "#ffde73b4"
+            b.parentElement.parentElement.parentElement.style.filter = "brightness(120%)"
+            userClicks = userClicks - 4000
+            let prevMultiplier = clicksMultiplier
+            clicksMultiplier = 25 + clicksMultiplier
+            setTimeout(() => {
+                clicksMultiplier = prevMultiplier
+                 b.parentElement.parentElement.parentElement.style.backgroundColor = "#f0f0f0"
+                b.parentElement.parentElement.parentElement.style.filter = "brightness(100%)"
+            }, 15000);
+            clicks.textContent = userClicks
+            
+               
+            }
+          }
+          else if(b.id == "bakeryBtn") {
+            if(userClicks >= 2500) {
+              factoryDiv.style.display = "block"
+              userClicks = userClicks - 2500
+              clicks.textContent = userClicks
+              let divNode = document.createElement("div")
+              divNode.setAttribute("class", "bakeryDiv")
+              divNode.innerHTML = `<img src="https://cdn-icons-png.flaticon.com/512/1772/1772770.png" alt=""> <p style="margin-top: 10px"> BAKERY </p>`
+
+              facilities.appendChild(divNode)
+              setInterval(bakeryFn, 1000);
+            }
+          }
+          else if(b.id == "factoryBtn") {
+            if(userClicks >= 15000) {
+              droneDiv.style.display = "block"
+              userClicks = userClicks - 15000
+              clicks.textContent = userClicks
+              let divNode = document.createElement("div")
+              divNode.setAttribute("class", "factoryDiv")
+              divNode.innerHTML = `<img src="https://cdn-icons-png.freepik.com/256/2728/2728395.png?semt=ais_hybrid" alt=""> <p style="margin-top: 10px"> FACTORY </p>`
+              facilities.appendChild(divNode)
+              setInterval(factoryFn, 1000);
+            }
+          }
+          else if(b.id == "droneBtn") {
+            if(userClicks >= 40000) {
+              worldDiv.style.display = "block"
+              
+              userClicks = userClicks - 40000
+              clicks.textContent = userClicks
+              let divNode = document.createElement("div")
+              divNode.setAttribute("class", "droneDiv")
+              divNode.innerHTML = `<img src="https://cdn-icons-png.flaticon.com/512/3272/3272734.png" alt=""> <p style="margin-top: 10px"> DRONE </p>`
+              facilities.appendChild(divNode)
+              setInterval(droneFn, 1000);
+            }
+          }
+          else if(b.id == "crumblCookie1Btn") {
+            if(userClicks >= 3000) {
+               userClicks = userClicks - 3000
+                clicks.textContent = userClicks
+                clicksMultiplier = clicksMultiplier + 10
+               cookie.src = "https://www.montgomeryadvertiser.com/gcdn/presto/2023/03/02/PMOY/075d8632-0c06-4a36-9c08-d7bc577abea6-BrownieSundae_Aerial.png?width=1200&disable=upscale&format=pjpg&auto=webp"
+               b.parentElement.style.display = "none"
+               
+            }
+          }
+          else if(b.id == "autoclicker2") {
+            if(userClicks >= 12000) {
+               userClicks = userClicks - 12000
+               clicks.textContent = parseInt(userClicks)
+               setInterval(fastAutoclicker, 250);
+               b.parentElement.style.display = "none"
+               
+            }
+          } 
+          else if(b.id == "diamondFinger") {
+            if(userClicks >= 22000) {
+              fiveTimesDiv.style.display ="block"
+              criticalHit2.style.display = "block"
+              crumblCookieDiv2.style.display ="block"
+              cursorDiv2.style.display = "block"
+              boostFactoryDiv.style.display = "block"
+            b.parentElement.style.display = "none"
+            b.parentElement.parentElement.parentElement.style.backgroundColor = "#73faffb4"
+            b.parentElement.parentElement.parentElement.style.filter = "brightness(120%)"
+            userClicks = userClicks - 22000
+            let prevMultiplier = clicksMultiplier
+            clicksMultiplier = 100 + clicksMultiplier
+            setTimeout(() => {
+                clicksMultiplier = prevMultiplier
+                 b.parentElement.parentElement.parentElement.style.backgroundColor = "#f0f0f0"
+                b.parentElement.parentElement.parentElement.style.filter = "brightness(100%)"
+            }, 10000);
+            clicks.textContent = parseInt(userClicks)
+            
+               
+            }
+          }
+          else if(b.id == "worldBtn") {
+              
+            if(userClicks >= 90000) {
+              universeDiv.style.display = "block"
+              userClicks = userClicks - 90000
+              clicks.textContent = userClicks
+              let divNode = document.createElement("div")
+              divNode.setAttribute("class", "worldDiv")
+              divNode.innerHTML = `<img src="https://i.ibb.co/RkZhLdqK/cookie-World.png" alt=""> <p style="margin-top: 10px"> WORLD </p>`
+              facilities.appendChild(divNode)
+              setInterval(worldFn, 1000);
+            }
+          }
+          else if(b.id == "universeBtn"){
+                 
+            if(userClicks >= 800000) {
+              userClicks = userClicks - 800000
+              clicks.textContent = userClicks
+              let divNode = document.createElement("div")
+              divNode.setAttribute("class", "worldDiv")
+              divNode.innerHTML = `<img src="https://cdn-icons-png.flaticon.com/512/8152/8152921.png" alt=""> <p style="margin-top: 10px"> UNIVERSE </p>`
+              facilities.appendChild(divNode)
+              setInterval(universeFn, 1000);
+              rebirthBtn.style.display = "block"
+            }
+          }
+          else if(b.id == "fiveTimesBtn") {
+            if(userClicks >= 30000) {
+              b.parentElement.style.display = "none"
+              userClicks = userClicks - 30000
+              clicks.textContent = parseInt(userClicks)
+              clicksMultiplier = clicksMultiplier + 5
+
+            }
+          }
+          else if(b.id == "criticalHit2Btn") {
+            if(userClicks >= 15000) {
+              b.parentElement.style.display = "none"
+              userClicks = userClicks - 15000
+              clicks.textContent = parseInt(userClicks)
+              criticalHit.style.display = "none"
+              setInterval(criticalHitFn, 400);
+            }
+          }
+          else if(b.id == "cursor2") {
+            if(userClicks >= cursorPrice) {
+              userClicks = userClicks - cursorPrice
+              clicks.textContent = parseInt(userClicks)
+              clicksMultiplier = clicksMultiplier + 5
+              
+              cursorPrice = cursorPrice * 1.4
+              cursor2.textContent =  cursorPrice.toFixed(2) + " COOKIES"
+
+            }
+          }
+          else if(b.id == "crumblCookie2") {
+            if(userClicks >= 25000) {
+              diamondFingerDiv2.style.display =" block"
+               userClicks = userClicks - 25000
+                clicks.textContent = userClicks
+                clicksMultiplier = clicksMultiplier + 20
+               cookie.src = "https://townsquare.media/site/657/files/2024/01/attachment-SugarFtTwix_Aerial.png?w=630&q=75"
+               b.parentElement.style.display = "none"
+               
+            }
+          }
+          else if(b.id == "diamondFinger2") {
+            if(userClicks >= 42000) {
+              crumblCookieDiv3.style.display =" block"
+               criticalHit3.style.display ="block"
+              multiplierClicks3Div.style.display = "block"
+            b.parentElement.style.display = "none"
+            b.parentElement.parentElement.parentElement.style.backgroundColor = "#73faffb4"
+            b.parentElement.parentElement.parentElement.style.filter = "brightness(120%)"
+            userClicks = userClicks - 42000
+            let prevMultiplier = clicksMultiplier
+            clicksMultiplier = 170 + clicksMultiplier
+            setTimeout(() => {
+                clicksMultiplier = prevMultiplier
+                 b.parentElement.parentElement.parentElement.style.backgroundColor = "#f0f0f0"
+                b.parentElement.parentElement.parentElement.style.filter = "brightness(100%)"
+            }, 10000);
+            clicks.textContent = parseInt(userClicks)
+            
+               
+            }
+          }
+          else if(b.id == "crumblCookie3") {
+            if(userClicks >= 44000) {
+               userClicks = userClicks - 44000
+                clicks.textContent = userClicks
+                clicksMultiplier = clicksMultiplier + 55
+               cookie.src = "https://cdn.zyrosite.com/cdn-ecommerce/store_01J9VW267PXBN2QDNJ0FAXSGX9%2Fassets%2F1732733343035-0cfacc58-b96b-40ff-84c8-39db5334baf4_DoubleChocolateChip_FlyingAerial_TECH.png"
+               b.parentElement.style.display = "none"
+         
+            }
+            
+          }
+          else if(b.id == "criticalHit3Btn") {
+            if(userClicks >= 25000) {
+              b.parentElement.style.display = "none"
+              userClicks = userClicks - 25000
+              clicks.textContent = parseInt(userClicks)
+              criticalHit.style.display = "none"
+              setInterval(criticalHitFn, 400);
+            }
+          }
+          else if(b.id == "multiplierClicks3") {
+            if(userClicks >= 60000) {
+              b.parentElement.style.display = "none"
+              rubyFingerDiv2.style.display = "block"
+            userClicks = userClicks - 60000
+            clicksMultiplier = clicksMultiplier  * 2
+            clicks.textContent = parseInt(userClicks)
+          }
+          }
+          else if(b.id == "boostBakery") {
+            if(userClicks >= 8000) {
+              userClicks = userClicks - 8000
+              b.parentElement.style.display = "none"
+              clicks.textContent = userClicks
+              bakeryRe = 30 + 15
+            }
+          }
+          else if(b.id == "boostFactory") {
+                if(userClicks >= 20000) {
+              userClicks = userClicks - 20000
+              b.parentElement.style.display = "none"
+              clicks.textContent = userClicks
+              factoryRe = 175 + 90
+            }
+          }
+          else if(b.id == "rubyFinger2") {
+            if(userClicks >=70000) {
+              autoclicker3Div.style.display = "block"
+              boostWorldDiv.style.display = "block" 
+              crumblCookieDiv4.style.display = "block"
+
+            b.parentElement.style.display = "none"
+            b.parentElement.parentElement.parentElement.style.backgroundColor = "#fb4d60"
+            b.parentElement.parentElement.parentElement.style.filter = "brightness(120%)"
+            userClicks = userClicks - 70000
+            let prevMultiplier = clicksMultiplier
+            clicksMultiplier = 275 + clicksMultiplier
+            setTimeout(() => {
+                clicksMultiplier = prevMultiplier
+                b.parentElement.parentElement.parentElement.style.backgroundColor = "#f0f0f0"
+                b.parentElement.parentElement.parentElement.style.filter = "brightness(100%)"
+            }, 10000);
+            clicks.textContent = parseInt(userClicks)
+            
+               
+            }
+          }
+          else if(b.id == "autoclicker3") {
+              if(userClicks >= 65000) {
+               userClicks = userClicks - 65000
+               clicks.textContent = parseInt(userClicks)
+               setInterval(fastAutoclicker, 50);
+               b.parentElement.style.display = "none"
+               
+            }
+          }
+          else if(b.id == "boostWorld") {
+            if(userClicks >= 75000) {
+              userClicks = userClicks - 75000
+              b.parentElement.style.display = "none"
+              clicks.textContent = userClicks
+              worldRe = 1000 + 500
+            }
+          } 
+          else if(b.id == "crumblCookie4") {
+            if(userClicks >= 62000) {
+              goldenCookiesDiv.style.display = "block"
+               userClicks = userClicks - 62000
+                clicks.textContent = userClicks
+                clicksMultiplier = clicksMultiplier + 75
+               cookie.src = "https://pngimg.com/d/oreo_PNG2.png"
+
+               b.parentElement.style.display = "none"
+         
+            }
+          }
+          else if(b.id == "cursor2Btn") {
+            if(userClicks >= cursorPrice) {
+              userClicks = userClicks - cursorPrice
+              clicks.textContent = parseInt(userClicks)
+              clicksMultiplier = clicksMultiplier + 5
+              
+              cursorPrice = cursorPrice * 1.4
+              cursor2.textContent =  cursorPrice.toFixed(2) + " COOKIES"
+
+            }
+          }
+          else if(b.id == "goldenCookies") {
+            if(userClicks >= 85000) {
+              emeraldFingerDiv.style.display = "block"
+              userClicks = userClicks - 85000
+              b.parentElement.style.display = "none"
+              clicks.textContent = userClicks
+              setInterval(goldenCookie, 1000)
+              
+            }
+          }
+          else if(b.id == "emeraldFinger") {
+            if(userClicks >= 125000) {
+              document.getElementById("moonDiv").style.display = "block"
+
+              unlockBlackHoleDiv.style.display = "block" 
+              crumblCookieDiv5.style.display = "block"
+            
+
+
+            b.parentElement.style.display = "none"
+            b.parentElement.parentElement.parentElement.style.backgroundColor = "#56e8a5"
+            b.parentElement.parentElement.parentElement.style.filter = "brightness(120%)"
+            userClicks = userClicks - 125000
+            let prevMultiplier = clicksMultiplier
+            clicksMultiplier = 455 + clicksMultiplier
+            setTimeout(() => {
+                clicksMultiplier = prevMultiplier
+                b.parentElement.parentElement.parentElement.style.backgroundColor = "#f0f0f0"
+                b.parentElement.parentElement.parentElement.style.filter = "brightness(100%)"
+            }, 10000);
+            clicks.textContent = parseInt(userClicks)
+            
+               
+            }
+          }
+          else if(b.id == "unlockBlackHole") {
+            if(userClicks >= 175000) {
+              blackHoleDiv.style.display = "block"
+              userClicks = userClicks - 175000
+              b.parentElement.style.display = "none"
+              clicks.textContent = userClicks
+              
+            }
+        }
+          else if(b.id == "blackHole") {
+
+            if(userClicks >= 2170000) {
+              userClicks = userClicks - 2170000
+              clicks.textContent = userClicks
+              let divNode = document.createElement("div")
+              divNode.setAttribute("class", "worldDiv")
+              divNode.innerHTML = `<img src="https://static-00.iconduck.com/assets.00/black-hole-icon-2048x1781-vjhy5ke3.png" alt=""> <p style="margin-top: 10px"> BLACK HOLE </p>`
+              facilities.appendChild(divNode)
+              setInterval(blackHoleFn, 1000);
+        
+            }
+           
+          }
+          else if(b.id == "crumblCookie5") {
+            if(userClicks >= 85000) {
+              jadeFingerDiv.style.display = "block"
+               userClicks = userClicks - 85000
+                clicks.textContent = userClicks
+                clicksMultiplier = clicksMultiplier + 175
+               cookie.src = "https://static.vecteezy.com/system/resources/previews/034/468/048/non_2x/donuts-doughnut-donut-doughnuts-donuts-transparent-background-ai-generated-png.png"
+
+               b.parentElement.style.display = "none"
+         
+            }
+          }
+          else if(b.id == "moon") {
+              if(userClicks >= 135000) {
+                userClicks = userClicks - 135000
+                clicks.textContent = userClicks
+                moonFn()
+                b.parentElement.style.display = "none"
+                setInterval(moonFn, 1000)
+              }
+
+
+          } 
+          else if(b.id == "boostUni") {
+            if(userClicks >= 275000) {
+              userClicks = userClicks - 275000
+              b.parentElement.style.display = "none"
+              clicks.textContent = userClicks
+              universeRe = 10500 + 5250
+            }
+          }
+          else if(b.id == "jadeFinger") {
+            if(userClicks >= 290000) {
+            spotifyDiv.style.display = "block"
+            boostUniDiv.style.display = "block"
+            santasDiv.style.display = "block"
+            b.parentElement.style.display = "none"
+            b.parentElement.parentElement.parentElement.style.backgroundColor = "#3AB09E"
+            b.parentElement.parentElement.parentElement.style.filter = "brightness(120%)"
+            userClicks = userClicks - 290000
+            let prevMultiplier = clicksMultiplier
+            clicksMultiplier = 855 + clicksMultiplier
+            setTimeout(() => {
+                clicksMultiplier = prevMultiplier
+                b.parentElement.parentElement.parentElement.style.backgroundColor = "#f0f0f0"
+                b.parentElement.parentElement.parentElement.style.filter = "brightness(100%)"
+            }, 10000);
+            clicks.textContent = parseInt(userClicks)
+            
+               
+            }
+          }
+          else if(b.id == "spotify") {
+            if(userClicks >= 300000) {
+              b.parentElement.style.display = "none"
+              appsDiv.style.display = "grid"
+              userClicks = userClicks - 300000
+              clicks.textContent = userClicks
+              setInterval(spotifyFn, 1000)
+              
+              let divNode = document.createElement("div")
+              divNode.setAttribute("class", "spotifyDiv")
+              divNode.innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1982px-Spotify_icon.svg.png" alt=""> <p style="margin-top: 10px"> SPOTIFY </p>`
+             
+              let buttonNode = document.createElement("button")
+              buttonNode.innerHTML = "SELL $" + spotifyCatalog
+              buttonNode.setAttribute("class", "spotifyBtn")
+
+              setInterval(() => {
+                spotifyCatalog += 4000;
+                buttonNode.innerHTML = "SELL $" + spotifyCatalog;
+            }, 2500);
+              
+              buttonNode.addEventListener("click", () => {
+                userClicks = userClicks + spotifyCatalog
+                clicks.textContent = userClicks
+                spotifyCatalog = 0
+                buttonNode.innerHTML = "SELL $" + spotifyCatalog
+              })
+              divNode.appendChild(buttonNode)
+              appsDiv.appendChild(divNode)
+  
+              }
+          } 
+          else if(b.id == "santas") {
+            if(userClicks >= 300000) {
+              userClicks = userClicks - 300000
+              crumblCookieDiv6.style.display = "block"
+              clicks.textContent = userClicks
+              b.parentElement.style.display = "none"
+              userOvenImg.style.display = "block"
+              userOvenImg.src = "https://i.ibb.co/Y4Vy0r5C/santasoven.png"
+              clicksMultiplier = clicksMultiplier + 160
+              ovenLevelP.textContent = "SANTA'S"
+            }
+          }
+          else if(b.id == "crumblCookie6") {
+            if(userClicks >= 250000) {
+             userClicks = userClicks - 250000
+             goldenCookiesDiv2.style.display = "block"
+                clicks.textContent = userClicks
+                clicksMultiplier = clicksMultiplier + 225
+               cookie.src = "https://png.pngtree.com/png-vector/20231015/ourmid/pngtree-the-gingerbread-man-png-image_10163077.png"
+
+               b.parentElement.style.display = "none"
+         
+            }
+          }
+          else if(b.id == "goldenCookies2") {
+            if(userClicks >= 285000 && goldenCookiesDiv.style.display == "none") {
+              userClicks = userClicks - 285000
+              quartzFingerDiv.style.display = "block"
+              b.parentElement.style.display = "none"
+              rGCMax = 40
+            }
+          }
+          else if(b.id == "quartzFinger") {
+            if(userClicks >= 500000) {
+              microsoftDiv.style.display = "block"
+              galacticDiv.style.display = "block"
+              heatDiv.style.display = "block"
+            b.parentElement.style.display = "none"
+            b.parentElement.parentElement.parentElement.style.backgroundColor = "#FFFFFF"
+            b.parentElement.parentElement.parentElement.style.filter = "brightness(120%)"
+            userClicks = userClicks - 500000
+            let prevMultiplier = clicksMultiplier
+            clicksMultiplier = 2500 + clicksMultiplier
+            setTimeout(() => {
+                clicksMultiplier = prevMultiplier
+                b.parentElement.parentElement.parentElement.style.backgroundColor = "#f0f0f0"
+                b.parentElement.parentElement.parentElement.style.filter = "brightness(100%)"
+            }, 10000);
+            clicks.textContent = parseInt(userClicks)
+            
+               
+            }
+          }
+          else if(b.id == "microsoft") {
+            if(userClicks >= 600000) {
+              b.parentElement.style.display = "none"
+              appsDiv.style.display = "grid"
+              userClicks = userClicks - 600000
+              clicks.textContent = userClicks
+              setInterval(microsoftFn, 1000)
+              
+              let divNode = document.createElement("div")
+              divNode.setAttribute("class", "microsoftDiv")
+              divNode.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8u8BZcgcIxcfgSJsas_HDf2pfYTBlmo2q3g&s" alt=""> <p style="margin-top: 10px"> MICROSOFT </p>`
+             
+              let buttonNode = document.createElement("button")
+              buttonNode.innerHTML = "SELL $" + microsoftCatalog
+              buttonNode.setAttribute("class", "spotifyBtn")
+
+              setInterval(() => {
+                microsoftCatalog += 6000;
+                buttonNode.innerHTML = "SELL $" + microsoftCatalog;
+            }, 2500);
+              
+              buttonNode.addEventListener("click", () => {
+                userClicks = userClicks + microsoftCatalog
+                clicks.textContent = userClicks
+                microsoftCatalog = 0
+                buttonNode.innerHTML = "SELL $" + microsoftCatalog
+              })
+              divNode.appendChild(buttonNode)
+              appsDiv.appendChild(divNode)
+  
+              }
+          } 
+          else if(b.id == "galactic") {
+             if(userClicks >= 550000) {
+              cometDiv.style.display = "block"
+              userClicks = userClicks - 550000
+              b.parentElement.style.display = "none"
+              clicks.textContent = userClicks
+              clicksMultiplier = clicksMultiplier + 300 + (Number(localStorage.getItem("rebirthsTr")) * 15)
+
+             }
+          }
+          else if(b.id == "heat") {
+            if(userClicks >= 875000) {
+              b.parentElement.style.display = "none"
+            userClicks = userClicks - 875000
+            if(clicksMultiplier % 2 != 0) {
+              clicksMultiplier = clicksMultiplier + 1
+            }
+            clicksMultiplier = clicksMultiplier  * 1.5
+            clicks.textContent = parseInt(userClicks)
+
+            let divNode = document.createElement("div")
+            divNode.style = "transition: 0.65s ease all ;background-color: transparent; position: absolute; width: 100%; margin-top: -650px; height: 10px; background-image: linear-gradient(to bottom, #ff9a00, #ff2200, #4d0000); border-radius: 10%; background-size: 600%;" 
+              setTimeout(() => {
+                divNode.style.height = "600px"
+                setTimeout(() => {
+                  divNode.style.marginTop = "40px"
+                  setTimeout(() => {
+                   divNode.remove()
+                  }, 600);
+                }, 200);
+              }, 10);
+            cookieClickerDiv.appendChild(divNode)
+            
+          }
+          }
+          else if(b.id == "comet") {
+            if(userClicks >= 800000) {
+              meteorDiv.style.display = "block"
+              clicksMultiplier = clicksMultiplier + 700 + (Number(localStorage.getItem("rebirthsTr")) * 15)
+              b.parentElement.style.display = "none"
+              userClicks = userClicks - 800000
+              clicks.textContent = userClicks
+              cookieClickerDiv.style.backgroundImage = "url(file:///C:/Users/lucas/Downloads/ezgif.com-rotate.gif)"        
+              cookieClickerDiv.style.backgroundSize = "95%"
+              cookieClickerDiv.style.backgroundAttachment = "fixed"
+              cookieClickerDiv.style.filter = "brightness(60%)"
+
+              setTimeout(() => {
+                cookieClickerDiv.style.backgroundImage = ""
+                cookieClickerDiv.style.filter = "brightness(100%)"
+                cookieClickerDiv.style.backgroundSize = "100%"
+                let meteorNode = document.createElement("div")
+                meteorNode.addEventListener("click", () => {
+                userClicks = userClicks + 1000000
+                clicks.textContent = parseInt(userClicks)
+                meteorNode.remove()
+              })
+
+              let rotateRnm = parseInt(Math.random() * 50)
+              const minCeiled = Math.ceil(-100);
+              const maxFloored = Math.floor(1200);
+
+
+              let marginRnm = Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+              meteorNode.style = `position: absolute; box-shadow: none; transform: scale(0.6) rotate(${rotateRnm}deg); margin-top: -290px; margin-left: ${marginRnm}px`
+              meteorNode.innerHTML = `<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/223667b8-e105-49fb-b991-bcceb219b075/dc8rt0b-01bb2bd4-c6f9-484e-994f-5ffd04d68bc4.png/v1/fill/w_400,h_400/asteroid_meteor_purple___transparent_space_stock_by_lapisdemon_dc8rt0b-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvMjIzNjY3YjgtZTEwNS00OWZiLWI5OTEtYmNjZWIyMTliMDc1XC9kYzhydDBiLTAxYmIyYmQ0LWM2ZjktNDg0ZS05OTRmLTVmZmQwNGQ2OGJjNC5wbmciLCJ3aWR0aCI6Ijw9NDAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0._U-ynr5Fuxx4WOOEo2P-PXASwisEZBBDygVJAX4b8qQ" alt="">`
+              meteorNode.setAttribute("class", "meteorDivs")
+              cookieClickerDiv.appendChild(meteorNode)
+              
+              let meteorImgRandom = ["https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/223667b8-e105-49fb-b991-bcceb219b075/dc8rt0b-01bb2bd4-c6f9-484e-994f-5ffd04d68bc4.png/v1/fill/w_400,h_400/asteroid_meteor_purple___transparent_space_stock_by_lapisdemon_dc8rt0b-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvMjIzNjY3YjgtZTEwNS00OWZiLWI5OTEtYmNjZWIyMTliMDc1XC9kYzhydDBiLTAxYmIyYmQ0LWM2ZjktNDg0ZS05OTRmLTVmZmQwNGQ2OGJjNC5wbmciLCJ3aWR0aCI6Ijw9NDAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0._U-ynr5Fuxx4WOOEo2P-PXASwisEZBBDygVJAX4b8qQ",
+                                      "https://i.pinimg.com/474x/af/bf/45/afbf45a37d2b7b4a71e67e6640f3d147.jpg",
+                                      "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/223667b8-e105-49fb-b991-bcceb219b075/dc8op0k-1332c0a1-63b8-4a65-92ed-a208a9f53331.png/v1/fill/w_400,h_400/asteroid_meteor_orange__transparent_space_stock_by_lapisdemon_dc8op0k-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvMjIzNjY3YjgtZTEwNS00OWZiLWI5OTEtYmNjZWIyMTliMDc1XC9kYzhvcDBrLTEzMzJjMGExLTYzYjgtNGE2NS05MmVkLWEyMDhhOWY1MzMzMS5wbmciLCJ3aWR0aCI6Ijw9NDAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.oNN4YpwO1gr0SqaHiCWGwZOemPACjcWBnUUJPPbwpY8",
+                                      "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/223667b8-e105-49fb-b991-bcceb219b075/dc8op0k-1332c0a1-63b8-4a65-92ed-a208a9f53331.png/v1/fill/w_400,h_400/asteroid_meteor_orange__transparent_space_stock_by_lapisdemon_dc8op0k-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvMjIzNjY3YjgtZTEwNS00OWZiLWI5OTEtYmNjZWIyMTliMDc1XC9kYzhvcDBrLTEzMzJjMGExLTYzYjgtNGE2NS05MmVkLWEyMDhhOWY1MzMzMS5wbmciLCJ3aWR0aCI6Ijw9NDAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.oNN4YpwO1gr0SqaHiCWGwZOemPACjcWBnUUJPPbwpY8",
+                                      "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/223667b8-e105-49fb-b991-bcceb219b075/dc8rt1h-1bd8b438-351f-4070-897b-e37ba3f672cc.png/v1/fill/w_400,h_400/asteroid_meteor_green___transparent_space_stock_by_lapisdemon_dc8rt1h-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvMjIzNjY3YjgtZTEwNS00OWZiLWI5OTEtYmNjZWIyMTliMDc1XC9kYzhydDFoLTFiZDhiNDM4LTM1MWYtNDA3MC04OTdiLWUzN2JhM2Y2NzJjYy5wbmciLCJ3aWR0aCI6Ijw9NDAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.30bTOvOMlD7GCZb6y33aAat9wfJq4JTwy-KcxENEbkQ"
+                                    ]      
+                                    
+             for(let i =1; i<7; i++) {
+                let meteorImgRnm = meteorImgRandom[parseInt(Math.random() * meteorImgRandom.length)]      
+                let marginRnmFor = Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+                let rotateRnmFor = parseInt(Math.random() * 50)
+
+                
+                let iRndm = parseInt(Math.random()*5)
+                if(iRndm == 2) {
+                  let divNode = document.createElement("div")
+                  divNode.addEventListener("click", ( ) => {
+                  userClicks = userClicks + 110000
+                  clicks.textContent = parseInt(userClicks)
+                  divNode.remove()
+                  })
+                  divNode.setAttribute("class", "meteorDivs")
+                  divNode.style = `position: absolute; box-shadow: none; transform: scale(0.6) rotate(${rotateRnmFor}deg); margin-top: -290px; margin-left: ${marginRnmFor}px`
+                  divNode.innerHTML = `<img src="${meteorImgRnm}" alt="">`
+                  cookieClickerDiv.appendChild(divNode)
+                }
+             } 
+              }, 7000);
+
+             
+                                          
+            }
+            
+          }
+          else if(b.id == "meteor") {
+             if(userClicks >= 1000000) {
+              randomPlanetDiv.style.display = "block"
+              cookieClickerDiv.style = "  border: 12px solid rgba(255, 30, 0, 0.7); box-shadow: 0 0 20px 5px rgba(255, 60, 0, 0.8), 0 0 40px 10px rgba(255, 0, 0, 0.6), 0 0 60px 15px rgba(255, 100, 0, 0.4);border-radius: 8px;animation: explodePulse 0.8s alternate forwards; "
+              cookieClickerDiv.addEventListener('animationend', () => {
+                setTimeout(() => {
+                  cookieClickerDiv.classList.remove('explosive-border');
+                  cookieClickerDiv.style = "border: 0px; box-shadow: 0; background-image: none; background-size: 100%; filter: brightness(100%)";
+                }, 1600);
+              });
+              userClicks = userClicks - 1000000
+              clicks.textContent = userClicks
+              b.parentElement.style.display = "none"
+
+              let divNode = document.createElement("div")
+              divNode.style = "position: absolute;  box-shadow: none; left: 50%; transform: rotate(-25deg); transition: ease-in-out all 0.3s; margin-top: -1800px"
+              divNode.innerHTML = "<img src='https://static.vecteezy.com/system/resources/thumbnails/046/838/785/small/burning-meteor-with-fire-tail-png.png' alt=''>"
+              cookieClickerDiv.appendChild(divNode)
+
+              setTimeout(() => {
+                divNode.style.marginTop = "-1800px";
+                divNode.style.transform = "rotate(-45deg)";
+                setTimeout(() => {
+                    divNode.style.transformStyle = "rotate(-35deg)";
+                    divNode.style.filter = "blur(2px) brightness(130%) drop-shadow(15px 8px 10px rgb(255, 60, 0)) saturate(150%)";
+                    setTimeout(() => {
+                    divNode.style.transform = "rotate(-20deg)";
+                    divNode.style.marginTop = "-250px";
+                    divNode.style.boxShadow = "none";
+                    let imgNode = document.createElement("img")
+                    imgNode.style = "position: absolute; width: 25%; height: 80%;  margin-left: 807px; margin-top: -450px"
+                    imgNode.src = "https://i.gifer.com/YQDj.gif"
+                    setTimeout(() => {
+                      
+                      cookieClickerDiv.appendChild(imgNode)
+                      setTimeout(() => {
+                        divNode.innerHTML = `<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/223667b8-e105-49fb-b991-bcceb219b075/dc8rt0b-01bb2bd4-c6f9-484e-994f-5ffd04d68bc4.png/v1/fill/w_400,h_400/asteroid_meteor_purple___transparent_space_stock_by_lapisdemon_dc8rt0b-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvMjIzNjY3YjgtZTEwNS00OWZiLWI5OTEtYmNjZWIyMTliMDc1XC9kYzhydDBiLTAxYmIyYmQ0LWM2ZjktNDg0ZS05OTRmLTVmZmQwNGQ2OGJjNC5wbmciLCJ3aWR0aCI6Ijw9NDAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0._U-ynr5Fuxx4WOOEo2P-PXASwisEZBBDygVJAX4b8qQ" alt="">`
+                        divNode.style = "transform: rotate(35deg) scale(0.6); filter: none; margin-top: -290px; position: absolute; margin-left: 800px; width: 400px; height: 400px; box-shadow: none; cursor: pointer "
+                        divNode.addEventListener("click", () => {
+                          userClicks = userClicks + 1200000
+                          clicks.textContent = parseInt(userClicks)
+                          divNode.remove()
+                        })
+                        setTimeout(() => {
+                          imgNode.remove()
+
+                        }, 1350);
+                      }, 400);
+                    }, 335);
+                    }, 600);
+                }, 600);
+              }, 10);
+            
+             }
+          }
+          else if(b.id == "randomPlanet") {
+            if(userClicks >= 1500000) {
+              userClicks = userClicks - 1500000
+              clicks.textContent = userClicks
+              b.parentElement.style.display = "none"
+              setInterval(planetRandomFn, 900)
+              ameFingerDiv.style.display = "block"
+             
+            }  
+          }
+          else if(b.id == "ameFinger") {
+            if(userClicks >= 4000000 ) {
+              appleDiv.style.display = "block"
+              superpositionDiv.style.display = "block"
+              wiskDiv.style.display = "block"
+            b.parentElement.style.display = "none"
+            b.parentElement.parentElement.parentElement.style.backgroundColor = "#84458a"
+            b.parentElement.parentElement.parentElement.style.filter = "brightness(120%)"
+            userClicks = userClicks - 4000000
+            let prevMultiplier = clicksMultiplier
+            clicksMultiplier = 5500 + clicksMultiplier
+            setTimeout(() => {
+                clicksMultiplier = prevMultiplier
+                b.parentElement.parentElement.parentElement.style.backgroundColor = "#f0f0f0"
+                b.parentElement.parentElement.parentElement.style.filter = "brightness(100%)"
+            }, 10000);
+            clicks.textContent = parseInt(userClicks)
+            }
+          }
+          else if(b.id == "apple") {
+            if(userClicks >= 2000000) {
+              b.parentElement.style.display = "none"
+              appsDiv.style.display = "grid"
+              userClicks = userClicks - 2000000
+              clicks.textContent = userClicks
+              setInterval(appleFn, 1000)
+              
+              let divNode = document.createElement("div")
+              divNode.setAttribute("class", "appleDiv")
+              divNode.innerHTML = `<img src="https://1000marcas.net/wp-content/uploads/2019/11/Apple-logo.png" alt=""> <p style="margin-top: 10px"> APPLE </p>`
+             
+              let buttonNode = document.createElement("button")
+              buttonNode.innerHTML = "SELL $" + appleCatalog
+              buttonNode.setAttribute("class", "spotifyBtn")
+
+              setInterval(() => {
+                appleCatalog += 10000;
+                buttonNode.innerHTML = "SELL $" + appleCatalog;
+            }, 2500);
+              
+              buttonNode.addEventListener("click", () => {
+                userClicks = userClicks + appleCatalog
+                clicks.textContent = userClicks
+                appleCatalog = 0
+                buttonNode.innerHTML = "SELL $" + appleCatalog
+              })
+              divNode.appendChild(buttonNode)
+              appsDiv.appendChild(divNode)
+  
+              }
+          }
+          else if(b.id == "superposition") {
+            if(userClicks >= 3000000) {
+              userClicks = userClicks - 3000000
+              clicks.textContent = userClicks
+              b.parentElement.style.display = "none"
+              clicksMultiplier = clicksMultiplier * 2
+            }
+          }
+          else if(b.id == "wisk") {
+            if(userClicks >= 1500000) {
+              quantumnOvenDiv.style.display = "block"
+              let prevMultiplier = clicksMultiplier
+              userClicks = userClicks - 1500000
+              clicks.textContent = userClicks
+              b.parentElement.style.display = "none"
+              
+              cookieClickerDiv.style.transition = "all 0.9s ease"
+              cookieClickerDiv.style.transform = "rotate(360deg)"
+              setTimeout(() => {
+                cookieClickerDiv.style.backgroundImage = "url('https://www.indy100.com/media-library/image.jpg?id=28043134&width=1245&height=700&quality=85&coordinates=111%2C0%2C111%2C0')"
+                cookieClickerDiv.style.backgroundSize = "87%"
+                clicksMultiplier = clicksMultiplier + 5000 + (Number(localStorage.getItem("rebirthsTr")) * 15)
+              }, 600);
+              setTimeout(() => {
+                cookieClickerDiv.style.transform = "rotate(0deg)"
+                clicksMultiplier = prevMultiplier
+                cookieClickerDiv.style.backgroundImage = ""
+                
+              }, 6600);
+          }
+          }
+          else if(b.id == "quantumnOven") {
+            if(userClicks >= 1250000) {
+              userClicks = userClicks - 1250000
+              clicks.textContent = userClicks
+              b.parentElement.style.display = "none"
+              userOvenImg.style.display = "block"
+              userOvenImg.src = "https://i.ibb.co/k6yJzttw/atomic-Oven.png"
+              clicksMultiplier = clicksMultiplier + 250
+              ovenLevelP.textContent = "QUANTUM"
+            }
+          }
+        })
+      })
+
+      
+      
+      
+      function spotifyFn() {
+        userClicks = userClicks + 12000 + (clicksMultiplier * 15)
+        clicks.textContent = userClicks
+      }
+
+
+      function microsoftFn() {
+        userClicks = userClicks + 20000 + (clicksMultiplier * 15)
+        clicks.textContent = userClicks
+      }
+
+      function appleFn() {
+        userClicks = userClicks + 35000 + (clicksMultiplier * 15)
+        clicks.textContent = userClicks
+      }
+
+
+let amounts2 = 0;
+let divPlanet; // Global variable to keep track of the moon
+let planetClicksMultiplier = 40000
+
+function planetRandomFn() {
+
+
+  if (amounts2 === 0) {
+    // Create the moon only once
+
+    let planets = ["https://upload.wikimedia.org/wikipedia/commons/9/94/Pluto-transparent.png",
+                            "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Neptune_cutout.png/1200px-Neptune_cutout.png",
+                            "https://upload.wikimedia.org/wikipedia/commons/f/f5/3D_Mars.png",
+                            "https://upload.wikimedia.org/wikipedia/commons/e/e1/Jupiter_%28transparent%29.png",
+                            "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Earth_Western_Hemisphere_transparent_background.png/1024px-Earth_Western_Hemisphere_transparent_background.png"
+              ]
+   let randomP = parseInt(Math.random()*planets.length)
+  
+
+    divPlanet = document.createElement("div");
+    divPlanet.style = "position: absolute; margin-top: -750px; transform: scale(0.3); box-shadow: none; margin-left: 1350px; transition: 3s ease all;";
+    if(randomP == 1) {
+      planetClicksMultiplier = 15000
+      divPlanet.style.marginLeft = "1050px";
+      divPlanet.style.transform = "scale(0.17)" // Adjust for Neptune's position
+    }
+    
+    else if(randomP == 2) {
+      planetClicksMultiplier = 22000
+    }
+    else if(randomP == 3) {
+      divPlanet.style.marginLeft = "1270px";
+      divPlanet.style.transform = "scale(0.3)" // Adjust for Jupiter's position
+      planetClicksMultiplier = 32000
+    }
+    else if(randomP == 4) {
+      planetClicksMultiplier = 42000
+      divPlanet.style.marginLeft = "1150px";
+      divPlanet.style.transform = "scale(0.22)" // Adjust for Earth
+    }
+
+
+
+    divPlanet.innerHTML = `<img src="${planets[randomP]}" alt="">`;
+    cookieClickerDiv.appendChild(divPlanet);
+    amounts2++;
+  }
+
+  // Toggle the position smoothly
+  if (divPlanet.style.marginTop === "-750px") {
+    setTimeout(() => {
+      divPlanet.style.marginTop = "-343px";
+    }, 3000);
+  } else {
+   setTimeout(() => {
+    divPlanet.style.marginTop = "-750px";
+   }, 3000);
+  }
+
+  userClicks = userClicks + planetClicksMultiplier
+  clicks.textContent = parseInt(userClicks);
+}
+
+
+
+
+
+
+let amounts = 0;
+let divMoon; // Global variable to keep track of the moon
+
+let moonClicks = 10000
+function moonFn() {
+    userClicks = userClicks + moonClicks
+    clicks.textContent = parseInt(userClicks);
+
+  if (amounts === 0) {
+    // Create the moon only once
+    divMoon = document.createElement("div");
+    divMoon.style = "position: absolute; margin-top: -750px; transform: scale(0.45); box-shadow: none; margin-left: 1480px; transition: 3s ease all;";
+    divMoon.innerHTML = `<img src="https://www.freeiconspng.com/thumbs/moon-png/moon-png-no-background-15.png" alt="">`;
+    cookieClickerDiv.appendChild(divMoon);
+    amounts++;
+  }
+
+  // Toggle the position smoothly
+  if (divMoon.style.marginTop === "-750px") {
+    setTimeout(() => {
+      divMoon.style.marginTop = "-343px";
+    }, 3000);
+  } else {
+   setTimeout(() => {
+    divMoon.style.marginTop = "-750px";
+   }, 3000);
+  }
+}
+
+
+
+
+      let rGCMax = 65
+      function goldenCookie() {
+        let rGC = parseInt(Math.random()*rGCMax)
+        if(rGC == 1) {
+          let divNode = document.createElement("div")
+          let minLeft = 120
+          let maxLeft = 650
+              divNode.setAttribute("class", "goldenDiv")
+              divNode.innerHTML = `<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8069e131-cb5c-4d88-a1cd-024c01b23e9b/ddnhgpm-91037e50-9a74-4ef8-8812-138968c432f0.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzgwNjllMTMxLWNiNWMtNGQ4OC1hMWNkLTAyNGMwMWIyM2U5YlwvZGRuaGdwbS05MTAzN2U1MC05YTc0LTRlZjgtODgxMi0xMzg5NjhjNDMyZjAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.3daAMuii1oWundmGShnHdxgANxNOoG_DGkiUEmZ-iSI" alt="">` 
+              divNode.style.marginLeft = parseInt(Math.random() * (maxLeft - minLeft + 1) + minLeft) + "px"
+
+              setTimeout(() => {
+                divNode.style.marginTop = "-220px"
+              }, 1000);
+              cookieClickerDiv.appendChild(divNode)    
+
+              let goldenDiv = document.querySelectorAll(".goldenDiv")
+              goldenDiv.forEach(c => {
+                c.addEventListener("click", () => {
+                  userClicks = userClicks + 50000
+                  clicks.textContent = parseInt(userClicks)
+                  c.remove()
+                })
+              })
+
+        }
+      }
+
+
+    
+      cookie.addEventListener("click", () => {
+        userClicks = userClicks + clicksMultiplier
+        cookie.style.filter = "brightness(120%)"
+        blurCookieDiv.style.filter = "blur(220px)"
+        setTimeout(() => {
+          blurCookieDiv.style.filter = "blur(0px)"
+        }, 800);
+        setTimeout(() => {
+          cookie.style.filter = "brightness(100%)"
+
+        }, 350);
+        clicks.textContent = parseInt(userClicks)
+      })
+
+
+   
+
+
+
+
+        function randomName() {
+  let namesSpin = document.querySelectorAll(".namesSpin");
+  let chosenName = document.getElementById("chosenName");
+  let markNames = document.getElementById("markNames");
+
+  let forcedName = null;
+  namesSpin.forEach(name => {
+    if (name.value.includes(";")) {
+      forcedName = name.value.split(";")[0];
+    }
+  });
+
+  if (forcedName) {
+    for (let i = 1; i < 25; i++) {
+      setTimeout(() => {
+        let r = Math.floor(Math.random() * markNames.childElementCount);
+        chosenName.textContent = markNames.children[r].value || markNames.children[r].textContent;
+        if(i==24){
+          chosenName.textContent = forcedName;
+        }
+      }, 50 * i);
+    
+    }
+   
+  } else {
+    // Si no hay ninguno, hacer el efecto de ruleta
+    for (let i = 1; i < 25; i++) {
+      setTimeout(() => {
+        let r = Math.floor(Math.random() * markNames.childElementCount);
+        chosenName.textContent = markNames.children[r].value || markNames.children[r].textContent;
+      }, 50 * i);
+    }
+  }
+}
+
+      deleteBtnSubject.addEventListener("click", () => {
+        if(subjectsDiv.childElementCount > 3) {
+          subjectsDiv.lastChild.remove()
+        }
+        else {
+          alert("The minimum is 3")
+        }
+      })
+
+
+
+      findGpaBtn.addEventListener("click", () => {
+        let totalSubjects = subjectsDiv.childElementCount
+        let notes = 0
+        document.querySelectorAll(".subjects").forEach(s=> {
+          if(s.value.includes(";") == false) {
+            notes = notes + Number(s.value)
+          }
+         if(s.value.includes(";")) {
+          notes = notes + Number(s.value.split(";")[1])
+        }
+        })
+        notesSpan.textContent = (notes / totalSubjects).toFixed(1)
+      })
+
+      document.getElementById("addMoreBtn").addEventListener("click", () => {
+        let inputNode = document.createElement("input")
+        inputNode.type = "text"
+        inputNode.setAttribute("class", "subjects")
+        subjectsDiv.appendChild(inputNode)
+        inputNode.placeholder = "subject;0"
+      })
+      
+
+    function squareN() {
+      let numbers = [];
+      let min = Number(minSN.value);
+      let max = Number(maxSN.value);
+
+      for (let i = min; i <= max; i++) {
+        if (Number.isInteger(Math.sqrt(i))) {
+          numbers.push(i);
+        }
+      }
+
+      squareNumbersP.textContent = numbers.join(", ");
+      alert("The total numbers are " + numbers.length);
+    }
+
+
+
+
+      let topRight = "right"
+
+
+      document.querySelectorAll(".btnTop").forEach(b => {
+        b.addEventListener("click", () => {
+          if(b.id == "top") {
+           let newImg =  document.getElementById("banner").style.backgroundImage.replace("right", "top")
+           document.getElementById("banner").style.backgroundImage = newImg
+           textACode.textContent =`    background-image: ${newImg}`
+          }
+          else if(b.id  == "right") {
+            let newImg =  document.getElementById("banner").style.backgroundImage.replace("top", "right")
+            document.getElementById("banner").style.backgroundImage = newImg
+            textACode.textContent = `    background-image: ${newImg}`
+          }
+          
+        
+        })
+      })
+
+
+
+    let colorChange = document.querySelectorAll(".colorChange")
+      colorChange.forEach(co => {
+        co.addEventListener("change", () => {
+          let backgroundImg = `linear-gradient(to ${topRight}, ${colors.children[0].value}, ${colors.children[1].value })`
+          document.getElementById("banner").style.backgroundImage = backgroundImg
+          textACode.textContent = `    background-image: ${backgroundImg}`
+
+        })
+      })
+
+      function addCI() {
+              let inputNode = document.createElement("input")
+      inputNode.type = "color"
+      inputNode.classList.add("colorChange")
+      inputNode.addEventListener("change", () => {
+        if(colors.children[2] != null) {
+          let backgroundImg = `linear-gradient(to ${topRight}, ${colors.children[0].value}, ${colors.children[1].value}, ${colors.children[2].value})`
+          if(colors.children[3] != null) {
+            backgroundImg = `linear-gradient(to ${topRight}, ${colors.children[0].value}, ${colors.children[1].value}, ${colors.children[2].value}, ${colors.children[3].value})`
+            if(colors.children[4] != null) {
+              backgroundImg = `linear-gradient(to ${topRight}, ${colors.children[0].value}, ${colors.children[1].value}, ${colors.children[2].value}, ${colors.children[3].value}, ${colors.children[4].value})`
+            }
+          }
+          document.getElementById("banner").style.backgroundImage = backgroundImg
+          textACode.textContent = `    background-image: ${backgroundImg}`
+        }
+      })
+      
+          if(document.getElementById("colors").childElementCount <= 4) {
+          document.getElementById("colors").appendChild(inputNode)
+        }
+        else {
+          let pNod = document.createElement("p")
+          pNod.style.color  ="red"
+          pNod.textContent = "You can only add 5 colors"
+          pNod.style.fontWeight =" bold"
+          document.getElementById("colors").appendChild(pNod)
+          setTimeout(() => {
+              pNod.style.display = "none"
+          }, 1200);
+        }
+      }
+
+      function getPfp() {
+          let gm = document.getElementById("gmailN").value
+         if(gm && gm.length >= 2) {
+          let firstL = gm[0]
+          let gmSplit =  gm.split(" ")
+          let secondL = gmSplit[1].charAt(0)
+          firstL = firstL.toUpperCase()
+          secondL = secondL.toUpperCase()
+          displayN.textContent = firstL + secondL
+
+          imgPfp.style.display = "block"
+          imgPfp.style.backgroundColor = `rgb(${parseInt(Math.random()*255)},${parseInt(Math.random()*255)},${parseInt(Math.random()*255)}`
+         }
+
+
+      }
+
+
+
+
+      function internetSpeed() {
+        const min = 0.1;
+        const max = 5.0;
+
+        
+        for (let i = 0; i < 35; i++) {
+  setTimeout(() => {
+    let rI = (Math.random() * (max - min) + min).toFixed(2);
+    document.getElementById("resultInternet").textContent = rI;
+    }, i * 50);
+}
+      }
+
+
+
+
+      function rollBall() {
+        let centerD = document.getElementById("centerD")
+        if(document.getElementById("question").value != "") {
+          centerD.style.backgroundColor = "#333"
+        document.getElementById("answ").textContent = ""
+
+        let r = parseInt(Math.random()*3) 
+
+        setTimeout(() => {
+          centerD.style.backgroundColor = "#c7c5c5"
+
+          if(r == 1) {
+            answ.textContent = "NO"
+            answ.style.marginLeft = "-8px"
+          }
+          else if(r == 2) {
+            answ.textContent = "YES"
+            answ.style.marginLeft = "-13px"
+          }
+
+          else if(r == 0) {
+            answ.textContent = "MAYBE"
+            answ.style.marginLeft = "-24px"
+            answ.style.fontSize = "19px"
+          }
+        }, 1800);
+        }
+        else {
+          alert("Enter a question")
+        }
+      }
+
+
+      function scramb() {
+        let word = document.getElementById("word").value
+        let scrambled = word.split("").sort(() => Math.random() - 0.5).join("")
+        document.getElementById("scrambled").textContent = scrambled
+        document.getElementById("scrambled").style.fontSize = "30px"
+
+        if(scrambled == word) {
+          document.getElementById("repeatedT").textContent = Number( document.getElementById("repeatedT").textContent) + 1
+        }
+      }
+
+
+      localStorage.setItem("visitedTimes", Number(localStorage.getItem("visitedTimes")) + 1)
+
+      document.getElementById("visitedTimes").textContent = localStorage.getItem("visitedTimes") || localStorage.setItem("visitedTimes", 0)
+
+
+
+      let emojis = document.querySelectorAll(".emojis")
+      emojis.forEach(e => 
+        e.addEventListener("click", () => {
+          let eId = e.getAttribute("id")
+          
+          e.style.transform = "scale(1.5)"
+          setTimeout(() => {
+            e.style.filter = "blur(36px)"
+          }, 130);
+          setTimeout(() => {
+             e.style.transform = "scale(1)"
+            e.style.filter  = "blur(0px)"
+          }, 530);
+          
+
+          if(eId == "1") {
+            e.parentElement.style.backgroundColor = "rgba(255, 0, 0, 0.56)"
+            e.parentElement.querySelector("h1").textContent = "You are angry"
+          
+
+          }
+          else if(eId === "2") {
+          e.parentElement.style.backgroundColor = "rgba(0, 113, 255, 0.56)"
+            e.parentElement.querySelector("h1").textContent = "You are sad"
+          }
+          else if(eId == "3") {
+              e.parentElement.style.backgroundColor = "rgba(50, 192, 150, 0.56)"
+            e.parentElement.querySelector("h1").textContent = "You are down"
+          }
+          else if(eId == "4") {
+               e.parentElement.style.backgroundColor = "rgba(71, 252, 100, 0.56)"
+            e.parentElement.querySelector("h1").textContent = "You are fine"
+          }
+          else if(eId == "5") {
+               e.parentElement.style.backgroundColor = "rgba(104, 255, 0, 0.56)"
+            e.parentElement.querySelector("h1").textContent = "You are excellent"
+          }
+
+        })
+      )
+
+
+
+
+      function passStren() {
+        let pass = document.getElementById("inpS").value
+        let strength = document.getElementById("strength")
+
+        if(pass.length < 4) return strength.textContent = "0%"
+        if(pass.length < 7) return strength.textContent = "10%"
+        if(pass.length < 10) return strength.textContent = "20%"
+        if(pass.length < 13) return strength.textContent = "30%"
+        if(pass.length < 16) return strength.textContent = "40%"
+        if(pass.length > 16) return strength.textContent = "90%"
+
+      }
+
+
+
+
+
+      function convert() {
+        let tempInput = document.getElementById("tempInput").value
+        let tempSelect = document.getElementById("tempSelect").value
+        let tempSelect2 = document.getElementById("tempSelect2").value
+        let result = 0
+
+        if(tempSelect == "C1") {
+          if(tempSelect2 == "F2") {
+            result = parseFloat(tempInput) * 1.8 + 32
+          }
+          else if(tempSelect2 == "K2") {
+            result = parseFloat(tempInput) + 273.15
+          }
+          else if(tempSelect2 == "C2") {
+            result = parseFloat(tempInput)
+          }
+        }
+
+        else if(tempSelect == "F1") {
+          if(tempSelect2 == "C2") {
+            result = (parseFloat(tempInput) - 32) / 1.8
+          }
+          else if(tempSelect2 == "K2") {
+            result = (parseFloat(tempInput) - 32) / 1.8 + 273.15
+          }
+          else if(tempSelect2 == "F2") {
+            result = parseFloat(tempInput)
+          }
+         
+
+         else if(tempSelect == "K1") {
+          if(tempSelect2 == "C2") {
+            result = parseFloat(tempInput) - 273.15
+          }
+          else if(tempSelect2 == "F2") {
+            result = (parseFloat(tempInput) - 273.15) * 1.8 + 32
+          }
+          else if(tempSelect2 == "K2") {
+            result = parseFloat(tempInput)
+          }
+
+         
+        }
+        
+
+        }
+        document.getElementById("tempInput2").value = result
+      }
+
+
+        let fizzbuz = document.getElementById("fizzbuz")
+
+        function fizzbuzz() {
+          let fbInput = document.getElementById("fbInput").value
+          let FB = Number(fbInput) + 1
+          document.getElementById("btnClose").style.display = "block"
+          let numbers = []
+
+          for(let i = 1; i<FB; i++) {
+            numbers.push(i)
+
+            if( i % 3 == 0) {
+              numbers[i-1] = "fizz"
+            }
+             if( i % 5 == 0) {
+              numbers[i-1] = "buzz"
+            }
+             if( i % 5 == 0 && i % 3 == 0) {
+              numbers[i-1] = "fizzbuzz"
+            }
+            
+
+            fizzbuz.textContent = numbers.join(", ")
+
+          }
+        }
+
+      
+
+
+
+        function findMT() {
+          let num = document.getElementById("num").value
+          let table = []
+          for(let i = 1; i<= 10; i++) {
+            table.push(num + " x " + i + " = " + num*i)
+          }
+          document.getElementById("table").textContent = table.join("\n")
+          alert("The multiplication table is " + table.join("\n"))
+
+          
+
+        }
+       
+
+        let rocksBtn = document.querySelectorAll(".rocksBtn")
+        rocksBtn.forEach(rock => {
+          rock.addEventListener("click", () => {
+            let id = rock.getAttribute("id")
+            if(id == "rock") {
+              document.getElementById("result").textContent = "You chose rock"
+            }
+            else if(id == "paper") {
+              document.getElementById("result").textContent = "You chose paper"
+            }
+            else if(id == "scissor") {
+              document.getElementById("result").textContent = "You chose scissor"
+            }
+
+            let computer = parseInt(Math.random()*3)
+            if(computer == 0) {
+              document.getElementById("computerD").textContent = "Computer chose rock"
+            }
+            else if(computer == 1) {
+              document.getElementById("computerD").textContent = "Computer chose paper"
+            }
+            else if(computer == 2) {
+              document.getElementById("computerD").textContent = "Computer chose scissor"
+            }
+
+            setTimeout(() => {
+              
+            if(id == "rock" && computer == 0) {
+              alert("It's a tie")
+            }
+            else if(id == "rock" && computer == 1) {
+              alert("You lose")
+            }
+            else if(id == "rock" && computer == 2) {
+              alert("You win")
+            }
+            else if(id == "paper" && computer == 0) {
+              alert("You win")
+            }
+            else if(id == "paper" && computer == 1) {
+              alert("It's a tie")
+            }
+            else if(id == "paper" && computer == 2) {
+              alert("You lose")
+            }
+            else if(id == "scissor" && computer == 0) {
+              alert("You lose")
+            }
+            else if(id == "scissor" && computer == 1) {
+              
+              alert("You win")
+            }
+            else if(id == "scissor" && computer == 2) {
+              alert("It's a tie")
+            }
+            }, 1100);
+            
+          })
+        })
+
+
+        let quotes = [
+          "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+          "The way to get started is to quit talking and begin doing.",
+          "Life is what happens when you're busy making other plans.",
+          "You only live once, but if you do it right, once is enough.",
+          "In the end, we will remember not the words of our enemies, but the silence of our friends.",
+          "The future belongs to those who believe in the beauty of their dreams.",
+          "The only impossible journey is the one you never begin.",
+          "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+          "Don't watch the clock; do what it does. Keep going.",
+          "The best way to predict the future is to create it.",
+          "You miss 100% of the shots you don't take.",
+          "Whether you think you can or think you can't, you're right.",
+          "The only limit to our realization of tomorrow will be our doubts of today.",
+          "Act as if what you do makes a difference. It does.",
+          "Success usually comes to those who are too busy to be looking for it.",
+          "Opportunities don't happen. You create them.",
+          "Don't be afraid to give up the good to go for the great.",
+          "I find that the harder I work, the more luck I seem to have.",
+          "The only way to do great work is to love what you do.",
+          "If you are not willing to risk the usual, you will have to settle for the ordinary.",
+          "The best revenge is massive success.",
+          "The only place where success comes before work is in the dictionary.",
+          "Success is walking from failure to failure with no loss of enthusiasm.",
+          "I am not a product of my circumstances. I am a product of my decisions.",
+          "You cannot shake hands with a clenched fist.",
+          "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
+          "The only way to do great work is to love what you do.",
+        ];
+        function randomQuote() {
+          let r = parseInt(Math.random() * quotes.length);
+          document.getElementById("randomQuote").textContent = quotes[r]
+
+        }
+
+
+        function findN() {
+
+          let number = document.getElementById("number").value
+          let greater = document.getElementById("greater").value
+          let less = document.getElementById("less").value
+
+          document.getElementById("greatt").textContent = greater
+          document.getElementById("les").textContent = less
+          document.querySelector("span").textContent = number
+
+
+
+            let numbers = []
+            for(let i = greater; i<less; i++) {
+                if(i % number == 0) {
+                    numbers.push(i)
+                }
+
+            }
+            document.getElementById("allNumbers").textContent = numbers
+
+            alert("The total numbers are " + numbers.length )
+            }
+
+            
+
+  
+
+
+      
+
+    </script>
+  </body>
+</html>
